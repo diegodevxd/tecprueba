@@ -1,12 +1,14 @@
-# Tienda de Electrodomésticos
+# Tienda de Electrodomésticos (Ingeniería)
 
-Este es un sitio web estático para una tienda de electrodomésticos.
+Este es un sitio web para una tienda de componentes de ingeniería y electrónica.
 
 ## Características
 
 - **Carrusel de Imágenes**: Muestra ofertas y productos destacados en la página de inicio.
 - **Catálogo de Productos**: Lista de productos con imágenes, precios y descripciones.
-- **Integración con WhatsApp**: Los clientes pueden contactar directamente para comprar un producto específico.
+- **Filtrado por Categoría**: Filtra productos por Kits, Componentes o Herramientas.
+- **Integración con WhatsApp**: Los clientes pueden contactar directamente para cotizar un producto específico.
+- **Mapa de Ubicación**: Integración con Google Maps.
 - **Diseño Responsivo**: Se adapta a dispositivos móviles y de escritorio.
 
 ## Cómo usar
