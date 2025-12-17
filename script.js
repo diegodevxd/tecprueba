@@ -93,13 +93,28 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 // Render Products
 const productGrid = document.getElementById('product-grid');
+const searchInput = document.getElementById('searchInput');
 
-function renderProducts(category = 'all') {
+function renderProducts(category = 'all', searchTerm = '') {
     productGrid.innerHTML = '';
     
-    const filteredProducts = category === 'all' 
-        ? products 
-        : products.filter(p => p.category === category);
+    const filteredProducts = products.filter(p => {
+        const matchesCategory = category === 'all' || p.category === category;
+        const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                              p.description.toLowerCase().includes(searchTerm.toLowerCase());
+        return matchesCategory && matchesSearch;
+    });
+
+    if (filteredProducts.length === 0) {
+        productGrid.innerHTML = `
+            <div class="col-span-full text-center py-12">
+                <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
+                <h3 class="text-2xl font-bold text-gray-500">No se encontraron productos</h3>
+                <p class="text-gray-400">Intenta con otra búsqueda o categoría.</p>
+            </div>
+        `;
+        return;
+    }
 
     filteredProducts.forEach((product, index) => {
         const productCard = document.createElement('div');
@@ -141,6 +156,8 @@ function renderProducts(category = 'all') {
 }
 
 // Filter Buttons Logic
+let currentCategory = 'all';
+
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
         // Reset styles for all buttons
@@ -153,8 +170,14 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
         e.target.classList.remove('bg-white', 'text-brand-dark', 'border', 'border-brand-primary');
         e.target.classList.add('bg-brand-primary', 'text-white');
 
-        renderProducts(e.target.dataset.category);
+        currentCategory = e.target.dataset.category;
+        renderProducts(currentCategory, searchInput.value);
     });
+});
+
+// Search Logic
+searchInput.addEventListener('input', (e) => {
+    renderProducts(currentCategory, e.target.value);
 });
 
 // Carousel Logic
@@ -184,6 +207,54 @@ setInterval(() => {
     currentIndex = (currentIndex + 1) % totalSlides;
     updateCarousel();
 }, 5000);
+
+// Contact Form Logic (AJAX)
+const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
+const formStatus = document.getElementById('formStatus');
+const resetFormBtn = document.getElementById('resetFormBtn');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        
+        try {
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                contactForm.classList.add('hidden');
+                formSuccess.classList.remove('hidden');
+                contactForm.reset();
+            } else {
+                const data = await response.json();
+                if (Object.hasOwn(data, 'errors')) {
+                    formStatus.textContent = data["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    formStatus.textContent = "Hubo un problema al enviar el mensaje.";
+                }
+                formStatus.classList.remove('hidden');
+            }
+        } catch (error) {
+            formStatus.textContent = "Hubo un problema al enviar el mensaje.";
+            formStatus.classList.remove('hidden');
+        }
+    });
+
+    if (resetFormBtn) {
+        resetFormBtn.addEventListener('click', () => {
+            formSuccess.classList.add('hidden');
+            contactForm.classList.remove('hidden');
+            formStatus.classList.add('hidden');
+        });
+    }
+}
 
 // Initial Render and Static Elements Observer
 document.addEventListener('DOMContentLoaded', () => {

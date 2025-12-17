@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -35,10 +36,11 @@
     <nav class="bg-gradient-to-r from-brand-dark to-brand-primary text-white p-4 shadow-lg sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center">
             <a href="#" class="text-3xl font-extrabold tracking-wider hover:text-brand-accent transition duration-300 animate__animated animate__fadeInLeft">
-                <i class="fas fa-bolt text-brand-accent mr-2"></i>ElectroStore
+                <i class="fas fa-microchip text-brand-accent mr-2"></i>Mevek Electronics
             </a>
             <div class="hidden md:flex space-x-8 text-lg font-medium">
                 <a href="#" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Inicio</a>
+                <a href="#nosotros" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Nosotros</a>
                 <a href="#productos" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Productos</a>
                 <a href="#contacto" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Contacto</a>
             </div>
@@ -89,6 +91,36 @@
         </button>
     </div>
 
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Taller de electrónica" class="rounded-xl shadow-2xl transform rotate-2 hover:rotate-0 transition duration-500">
+                </div>
+                <div class="md:w-1/2 animate-on-scroll">
+                    <h2 class="text-4xl font-extrabold text-brand-dark mb-6">Sobre Mevek Electronics</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Somos una empresa dedicada a la comercialización de componentes, dispositivos y accesorios electrónicos, orientada especialmente a estudiantes, ingenieros y entusiastas que desarrollan proyectos y prácticas escolares.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Nuestro objetivo es facilitar el acceso a la tecnología y fortalecer el aprendizaje práctico, ofreciendo productos de calidad y asesoría especializada.
+                    </p>
+                    <div class="flex gap-4">
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-brand-primary">100%</span>
+                            <span class="text-sm text-gray-500">Calidad</span>
+                        </div>
+                        <div class="text-center border-l border-gray-300 pl-4">
+                            <span class="block text-3xl font-bold text-brand-primary">+500</span>
+                            <span class="text-sm text-gray-500">Productos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Features Section -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -120,12 +152,26 @@
             <p class="text-xl text-gray-600">Componentes, kits y herramientas para tus proyectos.</p>
         </div>
 
-        <!-- Category Filters -->
-        <div class="flex flex-wrap justify-center gap-4 mb-12 animate-on-scroll">
-            <button class="filter-btn active bg-brand-primary text-white px-6 py-2 rounded-full font-bold hover:bg-brand-dark transition shadow-md" data-category="all">Todos</button>
-            <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-6 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm" data-category="kits">Kits & Arduinos</button>
-            <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-6 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm" data-category="componentes">Componentes</button>
-            <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-6 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm" data-category="herramientas">Herramientas</button>
+        <!-- Search and Filter -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6 animate-on-scroll">
+            <!-- Search Bar -->
+            <div class="relative w-full md:w-1/3">
+                <input type="text" id="searchInput" placeholder="Buscar producto, modelo o marca..." class="w-full pl-12 pr-4 py-3 rounded-full border-2 border-gray-200 focus:border-brand-primary focus:outline-none transition shadow-sm">
+                <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="flex flex-wrap justify-center gap-2">
+                <button class="filter-btn active bg-brand-primary text-white px-4 py-2 rounded-full font-bold hover:bg-brand-dark transition shadow-md text-sm" data-category="all">Todos</button>
+                <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-4 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm text-sm" data-category="kits">Kits</button>
+                <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-4 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm text-sm" data-category="componentes">Componentes</button>
+                <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-4 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm text-sm" data-category="herramientas">Herramientas</button>
+            </div>
+            
+            <!-- Download Catalog Button -->
+            <a href="#" class="bg-gray-800 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition flex items-center gap-2 shadow-md">
+                <i class="fas fa-file-download"></i> Catálogo PDF
+            </a>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="product-grid">
@@ -158,38 +204,59 @@
         </div>
     </section>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/521234567890" target="_blank" class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition duration-300 z-50 animate__animated animate__bounceInUp flex items-center justify-center w-16 h-16 group">
+        <i class="fab fa-whatsapp text-4xl"></i>
+        <span class="absolute right-full mr-4 bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap font-bold text-sm">¡Contáctanos!</span>
+    </a>
+
     <!-- Footer -->
     <footer id="contacto" class="bg-brand-dark text-white pt-16 pb-8 border-t-4 border-brand-accent">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
             <div>
-                <h3 class="text-2xl font-bold mb-6 text-brand-accent">ElectroStore</h3>
-                <p class="text-gray-400 mb-6">Tu tienda de confianza para equipar tu hogar con la mejor tecnología y electrodomésticos del mercado.</p>
+                <h3 class="text-2xl font-bold mb-6 text-brand-accent">Mevek Electronics</h3>
+                <p class="text-gray-400 mb-6">Tu aliado en proyectos de ingeniería y electrónica. Calidad y asesoría experta.</p>
                 <div class="flex space-x-4">
                     <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-twitter"></i></a>
                     <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
             <div>
                 <h3 class="text-xl font-bold mb-6">Enlaces Rápidos</h3>
                 <ul class="space-y-3 text-gray-400">
                     <li><a href="#" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Inicio</a></li>
+                    <li><a href="#nosotros" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Nosotros</a></li>
                     <li><a href="#productos" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Productos</a></li>
-                    <li><a href="#" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Nosotros</a></li>
                     <li><a href="#contacto" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Contacto</a></li>
                 </ul>
             </div>
             <div>
-                <h3 class="text-xl font-bold mb-6">Contacto</h3>
-                <ul class="space-y-4 text-gray-400">
-                    <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-brand-accent"></i> Av. Tecnológico 123, Ciudad de México</li>
-                    <li class="flex items-center"><i class="fas fa-phone-alt mr-3 text-brand-accent"></i> +52 55 1234 5678</li>
-                    <li class="flex items-center"><i class="fas fa-envelope mr-3 text-brand-accent"></i> contacto@electrostore.com</li>
-                </ul>
+                <h3 class="text-xl font-bold mb-6">Contáctanos</h3>
+                
+                <!-- Success Message (Hidden by default) -->
+                <div id="formSuccess" class="hidden flex flex-col items-center justify-center py-8">
+                    <div style="width: 200px; height: 200px;">
+                        <dotlottie-wc src="https://lottie.host/683e1f92-4f63-4c53-affe-0b366cbeb24b/SnHE2lDauF.lottie" autoplay></dotlottie-wc>
+                    </div>
+                    <p class="text-green-400 font-bold text-xl mt-2">¡Mensaje enviado!</p>
+                    <p class="text-gray-400 text-sm mb-6">Te responderemos pronto.</p>
+                    <button id="resetFormBtn" class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-full text-sm transition duration-300 shadow-md">
+                        Enviar otro mensaje
+                    </button>
+                </div>
+
+                <form id="contactForm" action="https://formspree.io/f/mnneepdd" method="POST" class="space-y-4">
+                    <input type="text" name="name" placeholder="Nombre" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-brand-accent text-white" required>
+                    <input type="email" name="email" placeholder="Correo Electrónico" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-brand-accent text-white" required>
+                    <textarea name="message" placeholder="Mensaje" rows="3" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-brand-accent text-white" required></textarea>
+                    <button type="submit" class="w-full bg-brand-accent text-brand-dark font-bold py-2 rounded hover:bg-yellow-400 transition duration-300">Enviar Mensaje</button>
+                    <p id="formStatus" class="text-red-500 text-sm hidden mt-2"></p>
+                </form>
             </div>
         </div>
         <div class="text-center border-t border-gray-800 pt-8 text-gray-500 text-sm">
-            <p>&copy; 2025 ElectroStore. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Mevek Electronics. Todos los derechos reservados.</p>
         </div>
     </footer>
 
