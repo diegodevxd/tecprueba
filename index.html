@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Electrodomésticos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#1e40af',
+                            accent: '#f59e0b',
+                            light: '#f3f4f6'
+                        }
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light font-sans overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-brand-dark to-brand-primary text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold tracking-wider hover:text-brand-accent transition duration-300 animate__animated animate__fadeInLeft">
+                <i class="fas fa-bolt text-brand-accent mr-2"></i>ElectroStore
+            </a>
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Inicio</a>
+                <a href="#productos" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Productos</a>
+                <a href="#contacto" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Contacto</a>
+            </div>
+            <button class="md:hidden text-2xl hover:text-brand-accent transition duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <div class="relative w-full h-[500px] overflow-hidden shadow-2xl">
+        <div id="carousel" class="flex transition-transform duration-700 ease-in-out h-full">
+            <!-- Slide 1 -->
+            <div class="min-w-full h-full flex items-center justify-center bg-cover bg-center relative group" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70 group-hover:opacity-60 transition duration-500"></div>
+                <div class="relative z-10 text-center p-10 border-4 border-brand-accent rounded-xl bg-black bg-opacity-40 backdrop-blur-sm animate__animated animate__zoomIn">
+                    <h2 class="text-5xl md:text-6xl text-white font-extrabold mb-6 drop-shadow-lg">Tecnología de Punta</h2>
+                    <p class="text-white text-2xl font-light mb-8">Transforma tu hogar hoy mismo.</p>
+                    <a href="#productos" class="bg-brand-accent text-brand-dark font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-lg">Ver Catálogo</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="min-w-full h-full flex items-center justify-center bg-cover bg-center relative group" style="background-image: url('https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70 group-hover:opacity-60 transition duration-500"></div>
+                <div class="relative z-10 text-center p-10 border-4 border-blue-400 rounded-xl bg-black bg-opacity-40 backdrop-blur-sm">
+                    <h2 class="text-5xl md:text-6xl text-white font-extrabold mb-6 drop-shadow-lg">Ofertas Explosivas</h2>
+                    <p class="text-white text-2xl font-light mb-8">Descuentos que no volverán.</p>
+                    <button class="bg-blue-500 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-600 transition duration-300 transform hover:scale-105 shadow-lg">Aprovechar Ahora</button>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="min-w-full h-full flex items-center justify-center bg-cover bg-center relative group" style="background-image: url('https://images.unsplash.com/photo-1526738549149-8e07eca6c147?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70 group-hover:opacity-60 transition duration-500"></div>
+                <div class="relative z-10 text-center p-10 border-4 border-green-400 rounded-xl bg-black bg-opacity-40 backdrop-blur-sm">
+                    <h2 class="text-5xl md:text-6xl text-white font-extrabold mb-6 drop-shadow-lg">Calidad Premium</h2>
+                    <p class="text-white text-2xl font-light mb-8">Solo las mejores marcas mundiales.</p>
+                    <button class="bg-green-500 text-white font-bold py-3 px-8 rounded-full hover:bg-green-600 transition duration-300 transform hover:scale-105 shadow-lg">Conocer Marcas</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carousel Controls -->
+        <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-50 p-4 rounded-full transition duration-300 backdrop-blur-md border border-white/30 group">
+            <i class="fas fa-chevron-left text-white text-2xl group-hover:scale-125 transition-transform"></i>
+        </button>
+        <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-50 p-4 rounded-full transition duration-300 backdrop-blur-md border border-white/30 group">
+            <i class="fas fa-chevron-right text-white text-2xl group-hover:scale-125 transition-transform"></i>
+        </button>
+    </div>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-b-4 border-brand-primary animate-on-scroll">
+                <div class="text-5xl text-brand-primary mb-4 animate-bounce-slow"><i class="fas fa-shipping-fast"></i></div>
+                <h3 class="text-xl font-bold mb-2">Envío Rápido</h3>
+                <p class="text-gray-600">Recibe tus productos en tiempo récord y con seguridad.</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-b-4 border-brand-accent animate-on-scroll">
+                <div class="text-5xl text-brand-accent mb-4 animate-pulse-slow"><i class="fas fa-medal"></i></div>
+                <h3 class="text-xl font-bold mb-2">Garantía Extendida</h3>
+                <p class="text-gray-600">Protegemos tu inversión con las mejores garantías.</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-b-4 border-green-500 animate-on-scroll">
+                <div class="text-5xl text-green-500 mb-4"><i class="fas fa-headset"></i></div>
+                <h3 class="text-xl font-bold mb-2">Soporte 24/7</h3>
+                <p class="text-gray-600">Estamos aquí para ayudarte en cualquier momento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="productos" class="container mx-auto py-16 px-4">
+        <div class="text-center mb-12 animate-on-scroll">
+            <h2 class="text-4xl font-extrabold text-brand-dark mb-4 relative inline-block">
+                Catálogo de Ingeniería
+                <span class="absolute bottom-0 left-0 w-full h-1 bg-brand-accent transform scale-x-0 transition-transform duration-300 hover:scale-x-100"></span>
+            </h2>
+            <p class="text-xl text-gray-600">Componentes, kits y herramientas para tus proyectos.</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12 animate-on-scroll">
+            <button class="filter-btn active bg-brand-primary text-white px-6 py-2 rounded-full font-bold hover:bg-brand-dark transition shadow-md" data-category="all">Todos</button>
+            <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-6 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm" data-category="kits">Kits & Arduinos</button>
+            <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-6 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm" data-category="componentes">Componentes</button>
+            <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-6 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm" data-category="herramientas">Herramientas</button>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10" id="product-grid">
+            <!-- Products will be injected here by JS -->
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-brand-dark mb-4">Nuestra Ubicación</h2>
+                <p class="text-gray-600">Visítanos para asesoría personalizada en tus proyectos.</p>
+            </div>
+            <div class="w-full h-96 rounded-xl overflow-hidden shadow-xl animate-on-scroll border-4 border-white">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.539464874229!2d-99.1677786850934!3d19.43260768688428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8c9c5c5c5c5%3A0x0!2zMTnCsDI1JzU3LjQiTiA5OcKwMDknNTYuMSJX!5e0!3m2!1ses-419!2smx!4v1625680000000!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter / Call to Action -->
+    <section class="bg-gradient-to-r from-brand-primary to-blue-800 py-16 text-white text-center relative overflow-hidden animate-on-scroll">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">¿No encuentras lo que buscas?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contáctanos directamente y te ayudaremos a conseguir el electrodoméstico ideal para ti.</p>
+            <a href="https://wa.me/521234567890" target="_blank" class="inline-block bg-brand-accent text-brand-dark font-bold py-4 px-10 rounded-full hover:bg-yellow-400 transition duration-300 shadow-lg transform hover:scale-110">
+                <i class="fab fa-whatsapp mr-2"></i> Hablar con un Asesor
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-brand-dark text-white pt-16 pb-8 border-t-4 border-brand-accent">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-brand-accent">ElectroStore</h3>
+                <p class="text-gray-400 mb-6">Tu tienda de confianza para equipar tu hogar con la mejor tecnología y electrodomésticos del mercado.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-6">Enlaces Rápidos</h3>
+                <ul class="space-y-3 text-gray-400">
+                    <li><a href="#" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Inicio</a></li>
+                    <li><a href="#productos" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Productos</a></li>
+                    <li><a href="#" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Nosotros</a></li>
+                    <li><a href="#contacto" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-6">Contacto</h3>
+                <ul class="space-y-4 text-gray-400">
+                    <li class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-brand-accent"></i> Av. Tecnológico 123, Ciudad de México</li>
+                    <li class="flex items-center"><i class="fas fa-phone-alt mr-3 text-brand-accent"></i> +52 55 1234 5678</li>
+                    <li class="flex items-center"><i class="fas fa-envelope mr-3 text-brand-accent"></i> contacto@electrostore.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-800 pt-8 text-gray-500 text-sm">
+            <p>&copy; 2025 ElectroStore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
