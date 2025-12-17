@@ -118,27 +118,29 @@ function renderProducts(category = 'all', searchTerm = '') {
 
     filteredProducts.forEach((product, index) => {
         const productCard = document.createElement('div');
-        productCard.className = 'bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-on-scroll';
+        // Updated classes for carousel on ALL devices
+        // Mobile: w-[45%] (approx 2 items) | Desktop: w-[280px] (fixed width cards)
+        productCard.className = 'bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-on-scroll min-w-[160px] w-[45%] md:w-[280px] flex-shrink-0 snap-start';
         
         productCard.innerHTML = `
-            <div class="relative overflow-hidden group h-64">
+            <div class="relative overflow-hidden group h-40 md:h-64">
                 <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                 <div class="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
-                <div class="absolute top-4 right-4 bg-brand-accent text-brand-dark font-bold px-3 py-1 rounded-full shadow-md text-sm uppercase">
+                <div class="absolute top-2 right-2 md:top-4 md:right-4 bg-brand-accent text-brand-dark font-bold px-2 py-0.5 md:px-3 md:py-1 rounded-full shadow-md text-xs md:text-sm uppercase">
                     ${product.category}
                 </div>
             </div>
-            <div class="p-6">
-                <h3 class="text-2xl font-bold mb-2 text-brand-dark group-hover:text-brand-primary transition-colors duration-300">${product.name}</h3>
-                <p class="text-gray-600 mb-4 text-sm line-clamp-2">${product.description}</p>
-                <div class="flex justify-between items-end mb-6">
+            <div class="p-4 md:p-6">
+                <h3 class="text-lg md:text-2xl font-bold mb-2 text-brand-dark group-hover:text-brand-primary transition-colors duration-300 line-clamp-2">${product.name}</h3>
+                <p class="text-gray-600 mb-3 md:mb-4 text-xs md:text-sm line-clamp-2">${product.description}</p>
+                <div class="flex justify-between items-end mb-4 md:mb-6">
                     <div>
-                        <span class="text-xs text-gray-500 block">Precio Estudiante</span>
-                        <span class="text-3xl font-extrabold text-brand-primary">${product.price}</span>
+                        <span class="text-[10px] md:text-xs text-gray-500 block">Precio Estudiante</span>
+                        <span class="text-xl md:text-3xl font-extrabold text-brand-primary">${product.price}</span>
                     </div>
                 </div>
-                <a href="https://wa.me/521234567890?text=Hola, me interesa el producto: ${product.name}" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white text-center font-bold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg transform hover:scale-105">
-                    <i class="fab fa-whatsapp text-2xl"></i> 
+                <a href="https://wa.me/521234567890?text=Hola, me interesa el producto: ${product.name}" target="_blank" class="block w-full bg-green-500 hover:bg-green-600 text-white text-center font-bold py-2 px-3 md:py-3 md:px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg transform hover:scale-105 text-sm md:text-base">
+                    <i class="fab fa-whatsapp text-lg md:text-2xl"></i> 
                     <span>Cotizar</span>
                 </a>
             </div>
