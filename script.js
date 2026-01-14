@@ -1496,7 +1496,7 @@ function openModal(productId) {
     
     // Construct WhatsApp Link
     const message = `Hola, me interesa el producto: ${product.name} (ID: ${product.id}). Precio: ${product.price}. ¿Tienen envío?`;
-    const whatsappUrl = `https://wa.me/521234567890?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/524774129364?text=${encodeURIComponent(message)}`;
     document.getElementById('modalWhatsappBtn').href = whatsappUrl;
 
     const modal = document.getElementById('productModal');
