@@ -1496,7 +1496,9 @@ function openModal(productId) {
     
     // Construct WhatsApp Link
     const message = `Hola, me interesa el producto: ${product.name} (ID: ${product.id}). Precio: ${product.price}. ¿Tienen envío?`;
-    const whatsappUrl = `https://wa.me/524774129364?text=${encodeURIComponent(message)}`;
+    // Using the user-provided short link. We append the text parameter hoping it overrides/appends.
+    // If not, it will just open the chat with the business, which is the primary goal.
+    const whatsappUrl = `https://wa.me/message/5JU7EJBVWDXLB1?text=${encodeURIComponent(message)}`;
     document.getElementById('modalWhatsappBtn').href = whatsappUrl;
 
     const modal = document.getElementById('productModal');
