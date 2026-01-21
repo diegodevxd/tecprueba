@@ -255,7 +255,7 @@
                     </button>
                 </div>
 
-                <form id="contactForm" action="https://formspree.io/f/mnneepdd" method="POST" class="space-y-4">
+                <form id="contactForm" action="https://formspree.io/f/mwvvrjll" method="POST" class="space-y-4">
                     <input type="text" name="name" placeholder="Nombre" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-brand-accent text-white" required>
                     <input type="email" name="email" placeholder="Correo Electrónico" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-brand-accent text-white" required>
                     <textarea name="message" placeholder="Mensaje" rows="3" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-brand-accent text-white" required></textarea>
@@ -281,59 +281,85 @@
             <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
 
             <!-- Modal panel -->
-            <div class="inline-block align-bottom bg-white rounded-2xl text-left overflow-hidden shadow-2xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full animate__animated animate__zoomIn">
-                <div class="absolute top-0 right-0 pt-4 pr-4 z-10">
-                    <button type="button" onclick="closeModal()" class="bg-white/80 backdrop-blur rounded-full p-2 hover:bg-gray-100 text-gray-400 hover:text-red-500 focus:outline-none transition-all duration-300 shadow-sm">
-                        <span class="sr-only">Cerrar</span>
-                        <i class="fas fa-times text-2xl"></i>
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-5xl sm:w-full animate__animated animate__zoomIn border-t-8 border-cyan-500">
+                
+                <!-- Custom Header inspired by Ficha Técnica -->
+                <div class="bg-gradient-to-r from-blue-900 to-blue-800 p-4 flex justify-between items-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
+                    <div class="relative z-10 flex flex-col">
+                        <h2 class="text-3xl font-black text-white italic tracking-tighter">MEVEK</h2>
+                        <h3 class="text-xl font-bold text-cyan-400 tracking-widest -mt-2">ELECTRONICS</h3>
+                    </div>
+                    <div class="relative z-10 text-right">
+                        <h2 class="text-2xl font-black text-gray-200 uppercase tracking-wide"><span class="text-cyan-400">FICHA</span>TECH</h2>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-widest">ESPECIFICACIÓN</h3>
+                    </div>
+                    <!-- Close button -->
+                    <button type="button" onclick="closeModal()" class="absolute top-2 right-2 text-white/50 hover:text-white transition z-20">
+                        <i class="fas fa-times"></i>
                     </button>
                 </div>
-                
-                <div class="flex flex-col md:flex-row">
-                    <!-- Image Section -->
-                    <div class="md:w-1/2 h-72 md:h-[550px] bg-gray-50 flex items-center justify-center p-6 relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-brand-light to-transparent opacity-50"></div>
-                        <img id="modalImage" src="" alt="" class="max-h-full max-w-full object-contain relative z-10 drop-shadow-xl transition-transform duration-500 hover:scale-105">
+
+                <div class="flex flex-col md:flex-row bg-white">
+                    <!-- Image Section (Left) -->
+                    <div class="md:w-5/12 p-8 flex items-center justify-center relative bg-white border-r border-gray-100">
+                        <!-- Decorative elements -->
+                        <div class="absolute top-4 left-4 w-16 h-16 border-l-4 border-t-4 border-cyan-400 rounded-tl-3xl"></div>
+                        <div class="absolute bottom-4 left-4 w-full h-2 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                        
+                        <img id="modalImage" src="" alt="" class="max-h-80 object-contain relative z-10 drop-shadow-2xl transition-transform duration-500 hover:scale-110">
                     </div>
                     
-                    <!-- Content Section -->
-                    <div class="md:w-1/2 p-6 md:p-10 flex flex-col bg-white">
-                        <div class="mb-5">
-                            <span id="modalCategory" class="inline-block bg-blue-100 text-brand-primary text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide border border-blue-200">
-                                Categoría
-                            </span>
+                    <!-- Specs Section (Right) -->
+                    <div class="md:w-7/12 p-6 md:p-8 bg-cyan-50/30">
+                        <div class="bg-cyan-500 text-white font-bold px-4 py-2 rounded-t-lg shadow-md inline-block mb-0">ESPECIFICACIONES TÉCNICAS</div>
+                        <div class="bg-white rounded-lg rounded-tl-none shadow-sm overflow-hidden border border-gray-200 mb-6">
+                            <table class="w-full text-sm">
+                                <tbody id="modalSpecsTable">
+                                    <!-- Specs will be injected here -->
+                                </tbody>
+                            </table>
                         </div>
-                        
-                        <h2 id="modalTitle" class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3 leading-tight">
-                            Nombre del Producto
-                        </h2>
-                        
-                        <div class="flex items-center gap-3 mb-6">
-                            <p id="modalPrice" class="text-4xl font-bold text-brand-accent">
-                                $0.00
-                            </p>
-                            <span class="text-sm text-gray-400 font-medium bg-gray-100 px-2 py-1 rounded">Precio Unitario</span>
+
+                        <!-- Feature Icons (Mockup based on image) -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-center gap-2 text-xs text-gray-600">
+                                <div class="w-8 h-8 rounded-full border-2 border-brand-dark flex items-center justify-center text-brand-dark">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <span class="leading-tight">Alta Calidad<br>Industrial</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs text-gray-600">
+                                <div class="w-8 h-8 rounded-full border-2 border-brand-dark flex items-center justify-center text-brand-dark">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="leading-tight">Garantía de<br>Funcionamiento</span>
+                            </div>
                         </div>
-                        
-                        <div class="flex-grow overflow-y-auto max-h-[250px] pr-2 mb-8 custom-scrollbar">
-                            <h4 class="font-bold text-gray-800 mb-3 flex items-center gap-2">
-                                <i class="fas fa-info-circle text-brand-primary"></i> Detalles y Características
-                            </h4>
-                            <p id="modalDescription" class="text-gray-600 leading-relaxed text-lg whitespace-pre-line">
-                                <!-- Descripton will go here -->
-                            </p>
-                        </div>
-                        
-                        <div class="mt-auto pt-6 border-t border-gray-100">
-                             <a id="modalWhatsappBtn" href="#" target="_blank" class="w-full group flex justify-center items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-green-500/30 text-lg">
-                                <i class="fab fa-whatsapp text-3xl group-hover:animate-bounce"></i>
-                                <span>Comprar por WhatsApp</span>
+
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-200">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-500 uppercase font-bold">Precio Unitario</span>
+                                <span id="modalPrice" class="text-4xl font-black text-brand-primary">$0.00</span>
+                            </div>
+                            <a id="modalWhatsappBtn" href="#" target="_blank" class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-green-500/30 transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                                <i class="fab fa-whatsapp text-2xl"></i>
+                                <span>Cotizar Ahora</span>
                             </a>
-                            <p class="text-xs text-center text-gray-400 mt-3">
-                                <i class="fas fa-shield-alt mr-1"></i> Compra segura y atención personalizada
-                            </p>
                         </div>
                     </div>
+                </div>
+                
+                <!-- Description Footer -->
+                <div class="bg-brand-primary p-6 text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h4 class="font-bold text-cyan-300 mb-2 border-b border-white/20 pb-1 inline-block text-lg">DESCRIPCIÓN</h4>
+                        <p id="modalDescription" class="text-blue-50 leading-relaxed text-sm md:text-base text-justify font-light">
+                            <!-- Description goes here -->
+                        </p>
+                    </div>
+                    <!-- Watermark -->
+                    <i class="fas fa-microchip absolute -bottom-10 -right-10 text-9xl text-white/5 opacity-20 rotate-12"></i>
                 </div>
             </div>
         </div>

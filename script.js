@@ -6,7 +6,17 @@ const products = [
     "image": "IMAGES/prod_1_LM386.png",
     "name": "Amplificador operacional LM386",
     "price": "$7 MXN",
-    "description": "Su bajo gasto de energ\u00eda en reposo lo hace ideal para proyectos port\u00e1tiles."
+    "description": "El LM386 es un amplificador de potencia diseñado para su uso en aplicaciones de consumo de bajo voltaje. La ganancia se establece internamente en 20 para mantener el recuento de partes externas bajo, pero la adición de una resistencia externa y un condensador entre los pines 1 y 8 aumentará la ganancia a cualquier valor de 20 a 200.",
+    "specs": {
+        "Producto": "Amplificador Operacional",
+        "Modelo": "LM386",
+        "Voltaje de Operación": "4V - 12V",
+        "Potencia de Salida": "325mW (típico)",
+        "Encapsulado": "DIP-8",
+        "Marca": "Texas Instruments / Genérico",
+        "Temperatura Operativa": "0°C ~ 70°C",
+        "SKU": "MVK-0001"
+    }
   },
   {
     "id": 2,
@@ -14,7 +24,16 @@ const products = [
     "image": "IMAGES/prod_2_LM393.png",
     "name": "Comparador de voltaje LM393",
     "price": "$7 MXN",
-    "description": "Su dise\u00f1o permite que estos comparadores funcionen con una \u00fanica fuente de alimentaci\u00f3n (desde 2V a 36V)"
+    "description": "El LM393 consiste en dos comparadores de voltaje independientes de precisión, diseñados para operar desde una sola fuente de alimentación en un amplio rango de voltajes.",
+    "specs": {
+        "Producto": "Comparador de Voltaje Dual",
+        "Modelo": "LM393",
+        "Voltaje de Alimentación": "2V - 36V",
+        "Corriente de Salida": "20mA",
+        "Encapsulado": "DIP-8",
+        "Tipo de Salida": "Colector Abierto",
+        "SKU": "MVK-0002"
+    }
   },
   {
     "id": 3,
@@ -1463,6 +1482,38 @@ const products = [
     "name": "Resitencia 47k\u03a9",
     "price": "$1 MXN",
     "description": "Limitar corriente en circuitos (como para LEDs), en divisores de voltaje para ajustar niveles de se\u00f1al (por ejemplo, para microcontroladores), como resistencias pull-up o pull-down para definir estados l\u00f3gicos, en circuitos de temporizaci\u00f3n (RC) y como componentes en filtros de audio o se\u00f1ales"
+  },
+  {
+    "id": 184,
+    "category": "componentes",
+    "image": "IMAGES/prod_184_Resitencia_150Ohm.png",
+    "name": "Resitencia 150Ω",
+    "price": "$1 MXN",
+    "description": "Resistencia de carbón de 150 ohms, ideal para limitar corriente en circuitos de transistores y LEDs de mayor potencia o brillo."
+  },
+  {
+    "id": 185,
+    "category": "componentes",
+    "image": "IMAGES/prod_185_Resitencia_330Ohm.png",
+    "name": "Resitencia 330Ω",
+    "price": "$1 MXN",
+    "description": "El valor estándar por excelencia para conectar LEDs a fuentes de 5V (como Arduino), asegurando la corriente óptima para el brillo sin dañar el componente."
+  },
+  {
+    "id": 186,
+    "category": "componentes",
+    "image": "IMAGES/prod_186_Resitencia_10kOhm.png",
+    "name": "Resitencia 10kΩ",
+    "price": "$1 MXN",
+    "description": "Valor fundamental en electrónica. Usada universalmente como resistencia pull-up/pull-down en microcontroladores, en divisores de voltaje referencia y circuitos de polarización."
+  },
+  {
+    "id": 187,
+    "category": "componentes",
+    "image": "IMAGES/prod_187_Resitencia_51kOhm.png",
+    "name": "Resitencia 51kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de precisión media, utilizada en circuitos de temporización, amplificadores operacionales y configuraciones de retroalimentación donde se requieren valores específicos no estándar de potencia de 10."
   }
 ];
 
@@ -1489,8 +1540,46 @@ function openModal(productId) {
     if (!product) return;
 
     document.getElementById('modalImage').src = product.image;
-    document.getElementById('modalTitle').textContent = product.name;
-    document.getElementById('modalCategory').textContent = product.category;
+    // Removed specific title text assignment as title is now dynamic in header maybe? 
+    // Wait, the new design doesn't have a main title in the body, it uses "MEVEK ELECTRONICS" as branding.
+    // The product Name acts as the main identifier in the specs table usually, but we should show it prominently.
+    // Let's check the HTML I just wrote. 
+    // I missed adding a specific element for the Product Name in the new HTML layout! 
+    // The Ficha Tecnica image usually has the "TIPO DE COMPONENTE" or "VALOR" as key identifiers.
+    // However, for general use, I should probably put the Name clearly somewhere or ensure it's in the Specs table.
+    // Let's inject it into the Specs Table as the first row "PRODUCTO" if not present.
+    
+    // Actually, looking at the HTML "modalTitle" is gone. 
+    // I need to update the HTML to include the Product Name, perhaps in the header or top of body.
+    // Or I can put it in the "Descripción" section header?
+    // Let's add it to the Specs Table for now as "Producto".
+
+    // Generate Specs Table
+    const specsTable = document.getElementById('modalSpecsTable');
+    specsTable.innerHTML = '';
+
+    // Default Specs based on existing data
+    const specs = product.specs || {
+        "Producto": product.name,
+        "Categoría": product.category,
+        "SKU": `MVK-${product.id.toString().padStart(4, '0')}`,
+        "Marca": "Genérico / Varios",
+        "Estado": "Nuevo"
+    };
+
+    // If specs didn't have Name, ensure it's there
+    if (!specs["Producto"]) specs["Producto"] = product.name;
+
+    Object.entries(specs).forEach(([key, value], index) => {
+        const row = document.createElement('tr');
+        row.className = index % 2 === 0 ? "bg-cyan-50" : "bg-white";
+        row.innerHTML = `
+            <td class="px-4 py-2 font-bold text-gray-600 uppercase text-xs w-1/3 border-r border-gray-100">${key}:</td>
+            <td class="px-4 py-2 text-gray-800 font-medium text-sm">${value}</td>
+        `;
+        specsTable.appendChild(row);
+    });
+
     document.getElementById('modalPrice').textContent = product.price;
     document.getElementById('modalDescription').textContent = product.description || "Sin descripción disponible.";
     
@@ -1556,7 +1645,7 @@ function renderProducts(category = 'all', searchTerm = '') {
 
         productCard.innerHTML = `
             <div class="relative overflow-hidden h-40 md:h-64 bg-gray-50">
-                <img src="${product.image}" loading="lazy" alt="${product.name}" class="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-110 mix-blend-multiply">
+                <img src="${product.image}" loading="lazy" alt="${product.name}" onerror="this.onerror=null;this.src='IMAGES/prod_101_Resitencia_3.3Ohm.png';" class="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-110 mix-blend-multiply">
                 <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-all duration-300"></div>
                 <div class="absolute top-2 right-2 md:top-4 md:right-4 bg-brand-accent text-brand-dark font-bold px-2 py-0.5 md:px-3 md:py-1 rounded-full shadow-md text-xs md:text-sm uppercase">
                     ${product.category}
