@@ -1572,6 +1572,86 @@ const products = [
     "description": "Valor estándar muy popular (100k). Esencial para pull-ups de bajo consumo, entradas de amplificadores y referencias de tierra."
   },
   {
+    "id": 196,
+    "category": "componentes",
+    "image": "IMAGES/prod_196_Resitencia_120kOhm.png",
+    "name": "Resitencia 120kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de 120k, útil para temporización y polarización en circuitos de baja corriente."
+  },
+  {
+    "id": 197,
+    "category": "componentes",
+    "image": "IMAGES/prod_197_Resitencia_150kOhm.png",
+    "name": "Resitencia 150kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de 150k, valor estándar para divisores de tensión."
+  },
+  {
+    "id": 198,
+    "category": "componentes",
+    "image": "IMAGES/prod_198_Resitencia_180kOhm.png",
+    "name": "Resitencia 180kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de 180k, utilizada en instrumentación y audio."
+  },
+  {
+    "id": 199,
+    "category": "componentes",
+    "image": "IMAGES/prod_199_Resitencia_220kOhm.png",
+    "name": "Resitencia 220kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de 220k, muy común para descarga de capacitores y referencias."
+  },
+  {
+    "id": 200,
+    "category": "componentes",
+    "image": "IMAGES/prod_200_Resitencia_270kOhm.png",
+    "name": "Resitencia 270kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de 270k, aplicaciones de filtrado y control."
+  },
+  {
+    "id": 201,
+    "category": "componentes",
+    "image": "IMAGES/prod_201_Resitencia_330kOhm.png",
+    "name": "Resitencia 330kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de 330k, valor alto para minimizar consumo en divisores."
+  },
+  {
+    "id": 202,
+    "category": "componentes",
+    "image": "IMAGES/prod_202_Resitencia_390kOhm.png",
+    "name": "Resitencia 390kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de 390k, usada en temporizadores de larga duración."
+  },
+  {
+    "id": 203,
+    "category": "componentes",
+    "image": "IMAGES/prod_203_Resitencia_470kOhm.png",
+    "name": "Resitencia 470kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de 470k, casi medio Megaohm, estándar en alta impedancia."
+  },
+  {
+    "id": 204,
+    "category": "componentes",
+    "image": "IMAGES/prod_204_Resitencia_510kOhm.png",
+    "name": "Resitencia 510kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de 510k, valor verde estándar."
+  },
+  {
+    "id": 205,
+    "category": "componentes",
+    "image": "IMAGES/prod_205_Resitencia_560kOhm.png",
+    "name": "Resitencia 560kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de 560k, valor alto para aplicaciones específicas de baja potencia."
+  },
+  {
     "id": 195,
     "category": "componentes",
     "image": "IMAGES/prod_195_Resitencia_1MOhm.png",
