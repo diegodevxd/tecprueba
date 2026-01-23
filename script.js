@@ -1486,7 +1486,7 @@ const products = [
   {
     "id": 184,
     "category": "componentes",
-    "image": "IMAGES/prod_184_Resitencia_150Ohm.png",
+    "image": "IMAGES/prod_101_Resitencia_3.3Ohm.png",
     "name": "Resitencia 150Ω",
     "price": "$1 MXN",
     "description": "Resistencia de carbón de 150 ohms, ideal para limitar corriente en circuitos de transistores y LEDs de mayor potencia o brillo."
@@ -1494,7 +1494,7 @@ const products = [
   {
     "id": 185,
     "category": "componentes",
-    "image": "IMAGES/prod_185_Resitencia_330Ohm.png",
+    "image": "IMAGES/prod_101_Resitencia_3.3Ohm.png",
     "name": "Resitencia 330Ω",
     "price": "$1 MXN",
     "description": "El valor estándar por excelencia para conectar LEDs a fuentes de 5V (como Arduino), asegurando la corriente óptima para el brillo sin dañar el componente."
@@ -1502,7 +1502,7 @@ const products = [
   {
     "id": 186,
     "category": "componentes",
-    "image": "IMAGES/prod_186_Resitencia_10kOhm.png",
+    "image": "IMAGES/prod_194_Resitencia_100kOhm.png",
     "name": "Resitencia 10kΩ",
     "price": "$1 MXN",
     "description": "Valor fundamental en electrónica. Usada universalmente como resistencia pull-up/pull-down en microcontroladores, en divisores de voltaje referencia y circuitos de polarización."
@@ -1582,7 +1582,7 @@ const products = [
   {
     "id": 197,
     "category": "componentes",
-    "image": "IMAGES/prod_197_Resitencia_150kOhm.png",
+    "image": "IMAGES/prod_194_Resitencia_100kOhm.png",
     "name": "Resitencia 150kΩ",
     "price": "$1 MXN",
     "description": "Resistencia de 150k, valor estándar para divisores de tensión."
@@ -1590,7 +1590,7 @@ const products = [
   {
     "id": 198,
     "category": "componentes",
-    "image": "IMAGES/prod_198_Resitencia_180kOhm.png",
+    "image": "IMAGES/prod_194_Resitencia_100kOhm.png",
     "name": "Resitencia 180kΩ",
     "price": "$1 MXN",
     "description": "Resistencia de 180k, utilizada en instrumentación y audio."
@@ -1606,7 +1606,7 @@ const products = [
   {
     "id": 200,
     "category": "componentes",
-    "image": "IMAGES/prod_200_Resitencia_270kOhm.png",
+    "image": "IMAGES/prod_194_Resitencia_100kOhm.png",
     "name": "Resitencia 270kΩ",
     "price": "$1 MXN",
     "description": "Resistencia de 270k, aplicaciones de filtrado y control."
@@ -1622,7 +1622,7 @@ const products = [
   {
     "id": 202,
     "category": "componentes",
-    "image": "IMAGES/prod_202_Resitencia_390kOhm.png",
+    "image": "IMAGES/prod_194_Resitencia_100kOhm.png",
     "name": "Resitencia 390kΩ",
     "price": "$1 MXN",
     "description": "Resistencia de 390k, usada en temporizadores de larga duración."
@@ -1658,6 +1658,110 @@ const products = [
     "name": "Resitencia 1MΩ",
     "price": "$1 MXN",
     "description": "Resistencia de alto valor (1 Megaohm), ideal para circuitos de muy bajo consumo, protección de entradas y temporizadores de larga duración."
+  },
+  {
+    "id": 206,
+    "category": "componentes",
+    "image": "IMAGES/prod_206_Potenciometro_1MOhm.png",
+    "name": "Potenciómetro 1MΩ",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 207,
+    "category": "componentes",
+    "image": "IMAGES/prod_207_Potenciometro_1K.png",
+    "name": "Potenciómetro 1K",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 208,
+    "category": "componentes",
+    "image": "IMAGES/prod_208_Potenciometro_2K.png",
+    "name": "Potenciómetro 2K",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 209,
+    "category": "componentes",
+    "image": "IMAGES/prod_209_Potenciometro_10K.png",
+    "name": "Potenciómetro 10K",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 210,
+    "category": "componentes",
+    "image": "IMAGES/prod_210_Potenciometro_20K.png",
+    "name": "Potenciómetro 20K",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 211,
+    "category": "componentes",
+    "image": "IMAGES/prod_211_Potenciometro_500  OHMS.png",
+    "name": "Potenciómetro 500 OHMS",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 212,
+    "category": "componentes",
+    "image": "IMAGES/prod_212_Potenciometro_500  K.png",
+    "name": "Potenciómetro 500K",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 213,
+    "category": "componentes",
+    "image": "IMAGES/prod_213_Potenciometro_250 K.png",
+    "name": "Potenciómetro 250K",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 214,
+    "category": "componentes",
+    "image": "IMAGES/prod_214_Potenciometro_50 K.png",
+    "name": "Potenciómetro 50K",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 215,
+    "category": "componentes",
+    "image": "IMAGES/prod_215_Potenciometro_5K.png",
+    "name": "Potenciómetro 5K",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 216,
+    "category": "componentes",
+    "image": "IMAGES/prod_216_Potenciometro_100K.png",
+    "name": "Potenciómetro 100K (A)",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 217,
+    "category": "componentes",
+    "image": "IMAGES/prod_217_Potenciometro_100K.png",
+    "name": "Potenciómetro 100K (B)",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
+  },
+  {
+    "id": 218,
+    "category": "componentes",
+    "image": "IMAGES/prod_218_Potenciometro_50K.png",
+    "name": "Potenciómetro 50K (B)",
+    "price": "$10 MXN",
+    "description": "se usa para controlar voltaje o corriente en circuitos analógicos, como ajuste fino de volumen en audio, regulación de intensidad lumínica, calibración de sensores, o como divisor de voltaje para dar una entrada variable a microcontroladores"
   }
 ];
 
@@ -1754,13 +1858,19 @@ document.addEventListener('keydown', (e) => {
 const productGrid = document.getElementById('product-grid');
 const searchInput = document.getElementById('searchInput');
 
+function normalizeString(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 function renderProducts(category = 'all', searchTerm = '') {
     productGrid.innerHTML = '';
     
+    const normalizedSearch = normalizeString(searchTerm);
+
     const filteredProducts = products.filter(p => {
         const matchesCategory = category === 'all' || p.category === category;
-        const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                              p.description.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesSearch = normalizeString(p.name).includes(normalizedSearch) || 
+                              normalizeString(p.description).includes(normalizedSearch);
         return matchesCategory && matchesSearch;
     });
 
