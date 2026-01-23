@@ -1514,6 +1514,70 @@ const products = [
     "name": "Resitencia 51kΩ",
     "price": "$1 MXN",
     "description": "Resistencia de precisión media, utilizada en circuitos de temporización, amplificadores operacionales y configuraciones de retroalimentación donde se requieren valores específicos no estándar de potencia de 10."
+  },
+  {
+    "id": 188,
+    "category": "componentes",
+    "image": "IMAGES/prod_188_Resitencia_56kOhm.png",
+    "name": "Resitencia 56kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de valor estándar E24, común en divisores de tensión y circuitos de polarización."
+  },
+  {
+    "id": 189,
+    "category": "componentes",
+    "image": "IMAGES/prod_189_Resitencia_62kOhm.png",
+    "name": "Resitencia 62kΩ",
+    "price": "$1 MXN",
+    "description": "Componente resistivo para aplicaciones de control de corriente y voltaje en circuitos electrónicos."
+  },
+  {
+    "id": 190,
+    "category": "componentes",
+    "image": "IMAGES/prod_190_Resitencia_68kOhm.png",
+    "name": "Resitencia 68kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia utilizada frecuentemente en circuitos de audio y temporización."
+  },
+  {
+    "id": 191,
+    "category": "componentes",
+    "image": "IMAGES/prod_191_Resitencia_75kOhm.png",
+    "name": "Resitencia 75kΩ",
+    "price": "$1 MXN",
+    "description": "Valor intermedio útil para calibración fina y divisores de voltaje específicos."
+  },
+  {
+    "id": 192,
+    "category": "componentes",
+    "image": "IMAGES/prod_192_Resitencia_82kOhm.png",
+    "name": "Resitencia 82kΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia común en etapas de pre-amplificación y filtrado."
+  },
+  {
+    "id": 193,
+    "category": "componentes",
+    "image": "IMAGES/prod_193_Resitencia_91kOhm.png",
+    "name": "Resitencia 91kΩ",
+    "price": "$1 MXN",
+    "description": "Último valor de la serie E24 antes de los 100k, usada en circuitos de alta impedancia."
+  },
+  {
+    "id": 194,
+    "category": "componentes",
+    "image": "IMAGES/prod_194_Resitencia_100kOhm.png",
+    "name": "Resitencia 100kΩ",
+    "price": "$1 MXN",
+    "description": "Valor estándar muy popular (100k). Esencial para pull-ups de bajo consumo, entradas de amplificadores y referencias de tierra."
+  },
+  {
+    "id": 195,
+    "category": "componentes",
+    "image": "IMAGES/prod_195_Resitencia_1MOhm.png",
+    "name": "Resitencia 1MΩ",
+    "price": "$1 MXN",
+    "description": "Resistencia de alto valor (1 Megaohm), ideal para circuitos de muy bajo consumo, protección de entradas y temporizadores de larga duración."
   }
 ];
 
