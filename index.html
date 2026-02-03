@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mevek Electronics | Tecnología que impulsa tus ideas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            primary: '#1e40af',
+                            accent: '#f59e0b',
+                            light: '#f3f4f6'
+                        }
+                    },
+                    animation: {
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light font-sans overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r from-brand-dark to-brand-primary text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold tracking-wider hover:text-brand-accent transition duration-300 animate__animated animate__fadeInLeft">
+                <i class="fas fa-microchip text-brand-accent mr-2"></i>Mevek Electronics
+            </a>
+            <div class="hidden md:flex space-x-8 text-lg font-medium">
+                <a href="#" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Inicio</a>
+                <a href="#nosotros" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Nosotros</a>
+                <a href="#productos" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Productos</a>
+                <a href="#contacto" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Contacto</a>
+            </div>
+            <button class="md:hidden text-2xl hover:text-brand-accent transition duration-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <div class="relative w-full h-[500px] overflow-hidden shadow-2xl">
+        <div id="carousel" class="flex transition-transform duration-700 ease-in-out h-full">
+            <!-- Slide 1 -->
+            <div class="min-w-full h-full flex items-center justify-center bg-cover bg-center relative group" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70 group-hover:opacity-60 transition duration-500"></div>
+                <div class="relative z-10 text-center p-10 border-4 border-brand-accent rounded-xl bg-black bg-opacity-40 backdrop-blur-sm animate__animated animate__zoomIn">
+                    <h2 class="text-5xl md:text-6xl text-white font-extrabold mb-6 drop-shadow-lg">Mevek</h2>
+                    <p class="text-white text-2xl font-light mb-8">Tecnología que impulsa tus ideas.</p>
+                    <a href="#productos" class="bg-brand-accent text-brand-dark font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-lg">Ver Catálogo</a>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="min-w-full h-full flex items-center justify-center bg-cover bg-center relative group" style="background-image: url('https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70 group-hover:opacity-60 transition duration-500"></div>
+                <div class="relative z-10 text-center p-10 border-4 border-blue-400 rounded-xl bg-black bg-opacity-40 backdrop-blur-sm">
+                    <h2 class="text-5xl md:text-6xl text-white font-extrabold mb-6 drop-shadow-lg">Ofertas Explosivas</h2>
+                    <p class="text-white text-2xl font-light mb-8">Descuentos que no volverán.</p>
+                    <button class="bg-blue-500 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-600 transition duration-300 transform hover:scale-105 shadow-lg">Aprovechar Ahora</button>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="min-w-full h-full flex items-center justify-center bg-cover bg-center relative group" style="background-image: url('https://images.unsplash.com/photo-1526738549149-8e07eca6c147?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70 group-hover:opacity-60 transition duration-500"></div>
+                <div class="relative z-10 text-center p-10 border-4 border-green-400 rounded-xl bg-black bg-opacity-40 backdrop-blur-sm">
+                    <h2 class="text-5xl md:text-6xl text-white font-extrabold mb-6 drop-shadow-lg">Calidad Premium</h2>
+                    <p class="text-white text-2xl font-light mb-8">Solo las mejores marcas mundiales.</p>
+                    <button class="bg-green-500 text-white font-bold py-3 px-8 rounded-full hover:bg-green-600 transition duration-300 transform hover:scale-105 shadow-lg">Conocer Marcas</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carousel Controls -->
+        <button id="prevBtn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-50 p-4 rounded-full transition duration-300 backdrop-blur-md border border-white/30 group">
+            <i class="fas fa-chevron-left text-white text-2xl group-hover:scale-125 transition-transform"></i>
+        </button>
+        <button id="nextBtn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-50 p-4 rounded-full transition duration-300 backdrop-blur-md border border-white/30 group">
+            <i class="fas fa-chevron-right text-white text-2xl group-hover:scale-125 transition-transform"></i>
+        </button>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Taller de electrónica" class="rounded-xl shadow-2xl transform rotate-2 hover:rotate-0 transition duration-500">
+                </div>
+                <div class="md:w-1/2 animate-on-scroll text-center">
+                    <h2 class="text-4xl font-extrabold text-brand-dark mb-6">Sobre Mevek Electronics</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Somos una empresa dedicada a la comercialización de componentes, dispositivos y accesorios electrónicos, orientada especialmente a estudiantes, ingenieros y entusiastas que desarrollan proyectos y prácticas escolares.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Nuestro objetivo es facilitar el acceso a la tecnología y fortalecer el aprendizaje práctico, ofreciendo productos de calidad y asesoría especializada.
+                    </p>
+                    <div class="flex gap-4 justify-center">
+                        <div class="text-center">
+                            <span class="block text-3xl font-bold text-brand-primary">100%</span>
+                            <span class="text-sm text-gray-500">Calidad</span>
+                        </div>
+                        <div class="text-center border-l border-gray-300 pl-4">
+                            <span class="block text-3xl font-bold text-brand-primary">+500</span>
+                            <span class="text-sm text-gray-500">Productos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-b-4 border-brand-primary animate-on-scroll">
+                <div class="text-5xl text-brand-primary mb-4 animate-bounce-slow"><i class="fas fa-graduation-cap"></i></div>
+                <h3 class="text-xl font-bold mb-2">Ofertas para Estudiantes</h3>
+                <p class="text-gray-600">Precios especiales y kits diseñados para tus proyectos escolares.</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-b-4 border-brand-accent animate-on-scroll">
+                <div class="text-5xl text-brand-accent mb-4 animate-pulse-slow"><i class="fas fa-medal"></i></div>
+                <h3 class="text-xl font-bold mb-2">Garantía Extendida</h3>
+                <p class="text-gray-600">Protegemos tu inversión con las mejores garantías.</p>
+            </div>
+            <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-b-4 border-green-500 animate-on-scroll">
+                <div class="text-5xl text-green-500 mb-4"><i class="fas fa-headset"></i></div>
+                <h3 class="text-xl font-bold mb-2">Soporte 24/7</h3>
+                <p class="text-gray-600">Estamos aquí para ayudarte en cualquier momento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="productos" class="container mx-auto py-16 px-4">
+        <div class="text-center mb-12 animate-on-scroll">
+            <h2 class="text-4xl font-extrabold text-brand-dark mb-4 relative inline-block">
+                Catálogo de Ingeniería
+                <span class="absolute bottom-0 left-0 w-full h-1 bg-brand-accent transform scale-x-0 transition-transform duration-300 hover:scale-x-100"></span>
+            </h2>
+            <p class="text-xl text-gray-600">Componentes, kits y herramientas para tus proyectos.</p>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-6 animate-on-scroll">
+            <!-- Search Bar -->
+            <div class="relative w-full md:w-1/3">
+                <input type="text" id="searchInput" placeholder="Buscar producto, modelo o marca..." class="w-full pl-12 pr-4 py-3 rounded-full border-2 border-gray-200 focus:border-brand-primary focus:outline-none transition shadow-sm">
+                <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="flex flex-wrap justify-center gap-2">
+                <button class="filter-btn active bg-brand-primary text-white px-4 py-2 rounded-full font-bold hover:bg-brand-dark transition shadow-md text-sm" data-category="all">Todos</button>
+                <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-4 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm text-sm" data-category="kits">Kits</button>
+                <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-4 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm text-sm" data-category="componentes">Componentes</button>
+                <button class="filter-btn bg-white text-brand-dark border border-brand-primary px-4 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm text-sm" data-category="herramientas">Herramientas</button>
+            </div>
+            
+            <!-- Download Catalog Button -->
+            <a href="#" class="bg-gray-800 text-white px-6 py-3 rounded-lg font-bold hover:bg-gray-700 transition flex items-center gap-2 shadow-md">
+                <i class="fas fa-file-download"></i> Catálogo PDF
+            </a>
+        </div>
+        
+        <!-- Product Grid/Carousel Container -->
+        <!-- Carousel on ALL devices -->
+        <div class="flex overflow-x-auto gap-4 md:gap-8 pb-8 snap-x snap-mandatory" id="product-grid">
+            <!-- Products will be injected here by JS -->
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="text-3xl font-bold text-brand-dark mb-4">Nuestra Ubicación</h2>
+                <p class="text-gray-600 mb-2">Visítanos para asesoría personalizada en tus proyectos.</p>
+                <p class="font-bold text-gray-800 text-lg flex items-center justify-center gap-2">
+                    <i class="fas fa-map-marker-alt text-brand-accent"></i> 
+                    Héroes de León, C. San Nicolás 3600A, 37544 Guanajuato, Gto.
+                </p>
+                <p class="text-gray-500 mt-2">
+                    <i class="far fa-clock mr-1"></i> Lun-Vie: 9am-2pm, 3:30pm-7pm | Sáb: 9am-2pm
+                </p>
+            </div>
+            <div class="w-full h-96 rounded-xl overflow-hidden shadow-xl animate-on-scroll border-4 border-white">
+                <iframe src="https://maps.google.com/maps?q=Mevek+Electronics,+C.+San+Nicol%C3%A1s+3600A,+37544+Guanajuato,&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter / Call to Action -->
+    <section class="bg-gradient-to-r from-brand-primary to-blue-800 py-16 text-white text-center relative overflow-hidden animate-on-scroll">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">¿No encuentras lo que buscas?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contáctanos directamente y te ayudaremos a conseguir el electrodoméstico ideal para ti.</p>
+            <a href="https://wa.me/message/5JU7EJBVWDXLB1" target="_blank" class="inline-block bg-brand-accent text-brand-dark font-bold py-4 px-10 rounded-full hover:bg-yellow-400 transition duration-300 shadow-lg transform hover:scale-110">
+                <i class="fab fa-whatsapp mr-2"></i> Hablar con un Asesor
+            </a>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/message/5JU7EJBVWDXLB1" target="_blank" class="fixed bottom-8 right-8 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition duration-300 z-50 animate__animated animate__bounceInUp flex items-center justify-center w-16 h-16 group">
+        <i class="fab fa-whatsapp text-4xl"></i>
+        <span class="absolute right-full mr-4 bg-white text-gray-800 px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition duration-300 whitespace-nowrap font-bold text-sm">¡Contáctanos!</span>
+    </a>
+
+    <!-- Footer -->
+    <footer id="contacto" class="bg-brand-dark text-white pt-16 pb-8 border-t-4 border-brand-accent">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <div>
+                <h3 class="text-2xl font-bold mb-6 text-brand-accent">Mevek Electronics</h3>
+                <p class="text-gray-400 mb-6">Tu aliado en proyectos de ingeniería y electrónica. Calidad y asesoría experta.</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/profile.php?id=61568169632653&mibextid=ZbWKwL" target="_blank" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-6">Enlaces Rápidos</h3>
+                <ul class="space-y-3 text-gray-400">
+                    <li><a href="#" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Inicio</a></li>
+                    <li><a href="#nosotros" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Nosotros</a></li>
+                    <li><a href="#productos" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Productos</a></li>
+                    <li><a href="#contacto" class="hover:text-brand-accent transition duration-300"><i class="fas fa-chevron-right mr-2 text-xs"></i>Contacto</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-bold mb-6">Contáctanos</h3>
+                
+                <!-- Success Message (Hidden by default) -->
+                <div id="formSuccess" class="hidden flex flex-col items-center justify-center py-8">
+                    <div style="width: 200px; height: 200px;">
+                        <dotlottie-wc src="https://lottie.host/683e1f92-4f63-4c53-affe-0b366cbeb24b/SnHE2lDauF.lottie" autoplay></dotlottie-wc>
+                    </div>
+                    <p class="text-green-400 font-bold text-xl mt-2">¡Mensaje enviado!</p>
+                    <p class="text-gray-400 text-sm mb-6">Te responderemos pronto.</p>
+                    <button id="resetFormBtn" class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-full text-sm transition duration-300 shadow-md">
+                        Enviar otro mensaje
+                    </button>
+                </div>
+
+                <form id="contactForm" action="https://formspree.io/f/mykkopob" method="POST" class="space-y-4">
+                    <input type="text" name="name" placeholder="Nombre" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-brand-accent text-white" required>
+                    <input type="email" name="email" placeholder="Correo Electrónico" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-brand-accent text-white" required>
+                    <textarea name="message" placeholder="Mensaje" rows="3" class="w-full bg-gray-800 border border-gray-700 rounded px-4 py-2 focus:outline-none focus:border-brand-accent text-white" required></textarea>
+                    <button type="submit" class="w-full bg-brand-accent text-brand-dark font-bold py-2 rounded hover:bg-yellow-400 transition duration-300">Enviar Mensaje</button>
+                    <p id="formStatus" class="text-red-500 text-sm hidden mt-2"></p>
+                </form>
+            </div>
+        </div>
+        <div class="text-center border-t border-gray-800 pt-8 text-gray-500 text-sm">
+            <p>&copy; 2025 Mevek Electronics. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="fixed inset-0 z-[100] hidden overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <!-- Background overlay -->
+            <div id="modalOverlay" class="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity backdrop-blur-sm" aria-hidden="true" onclick="closeModal()"></div>
+
+            <!-- This element is to trick the browser into centering the modal contents. -->
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+
+            <!-- Modal panel -->
+            <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-5xl sm:w-full animate__animated animate__zoomIn border-t-8 border-cyan-500">
+                
+                <!-- Custom Header inspired by Ficha Técnica -->
+                <div class="bg-gradient-to-r from-blue-900 to-blue-800 p-4 flex justify-between items-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-30"></div>
+                    <div class="relative z-10 flex flex-col">
+                        <h2 class="text-3xl font-black text-white italic tracking-tighter">MEVEK</h2>
+                        <h3 class="text-xl font-bold text-cyan-400 tracking-widest -mt-2">ELECTRONICS</h3>
+                    </div>
+                    <div class="relative z-10 text-right">
+                        <h2 class="text-2xl font-black text-gray-200 uppercase tracking-wide"><span class="text-cyan-400">FICHA</span>TECH</h2>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-widest">ESPECIFICACIÓN</h3>
+                    </div>
+                    <!-- Close button -->
+                    <button type="button" onclick="closeModal()" class="absolute top-2 right-2 text-white/50 hover:text-white transition z-20">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="flex flex-col md:flex-row bg-white">
+                    <!-- Image Section (Left) -->
+                    <div class="md:w-5/12 p-8 flex items-center justify-center relative bg-white border-r border-gray-100">
+                        <!-- Decorative elements -->
+                        <div class="absolute top-4 left-4 w-16 h-16 border-l-4 border-t-4 border-cyan-400 rounded-tl-3xl"></div>
+                        <div class="absolute bottom-4 left-4 w-full h-2 bg-gradient-to-r from-cyan-400 to-transparent"></div>
+                        
+                        <img id="modalImage" src="" alt="" class="max-h-80 object-contain relative z-10 drop-shadow-2xl transition-transform duration-500 hover:scale-110">
+                    </div>
+                    
+                    <!-- Specs Section (Right) -->
+                    <div class="md:w-7/12 p-6 md:p-8 bg-cyan-50/30">
+                        <div class="bg-cyan-500 text-white font-bold px-4 py-2 rounded-t-lg shadow-md inline-block mb-0">ESPECIFICACIONES TÉCNICAS</div>
+                        <div class="bg-white rounded-lg rounded-tl-none shadow-sm overflow-hidden border border-gray-200 mb-6">
+                            <table class="w-full text-sm">
+                                <tbody id="modalSpecsTable">
+                                    <!-- Specs will be injected here -->
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Feature Icons (Mockup based on image) -->
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div class="flex items-center gap-2 text-xs text-gray-600">
+                                <div class="w-8 h-8 rounded-full border-2 border-brand-dark flex items-center justify-center text-brand-dark">
+                                    <i class="fas fa-microchip"></i>
+                                </div>
+                                <span class="leading-tight">Alta Calidad<br>Industrial</span>
+                            </div>
+                            <div class="flex items-center gap-2 text-xs text-gray-600">
+                                <div class="w-8 h-8 rounded-full border-2 border-brand-dark flex items-center justify-center text-brand-dark">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span class="leading-tight">Garantía de<br>Funcionamiento</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-auto pt-4 border-t border-gray-200">
+                            <div class="flex flex-col">
+                                <span class="text-xs text-gray-500 uppercase font-bold">Precio Unitario</span>
+                                <span id="modalPrice" class="text-4xl font-black text-brand-primary">$0.00</span>
+                            </div>
+                            <a id="modalWhatsappBtn" href="#" target="_blank" class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-green-500/30 transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                                <i class="fab fa-whatsapp text-2xl"></i>
+                                <span>Cotizar Ahora</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Description Footer -->
+                <div class="bg-brand-primary p-6 text-white relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h4 class="font-bold text-cyan-300 mb-2 border-b border-white/20 pb-1 inline-block text-lg">DESCRIPCIÓN</h4>
+                        <p id="modalDescription" class="text-blue-50 leading-relaxed text-sm md:text-base text-justify font-light">
+                            <!-- Description goes here -->
+                        </p>
+                    </div>
+                    <!-- Watermark -->
+                    <i class="fas fa-microchip absolute -bottom-10 -right-10 text-9xl text-white/5 opacity-20 rotate-12"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

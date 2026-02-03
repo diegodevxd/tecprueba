@@ -1,0 +1,59 @@
+GUÍA DE USO - TIENDA DE COMPONENTES DE INGENIERÍA
+=================================================
+
+Bienvenido a la guía de usuario para su nueva tienda en línea de componentes electrónicos y kits de ingeniería. Este documento le explicará cómo navegar y utilizar todas las funciones del sitio web.
+
+1. NAVEGACIÓN PRINCIPAL
+-----------------------
+En la parte superior de la página encontrará la barra de navegación (Menú).
+- Inicio: Le lleva a la parte superior de la página, donde están las ofertas destacadas.
+- Productos: Desplaza la página directamente al catálogo de componentes.
+- Contacto: Le lleva al pie de página donde encontrará el mapa y la información de contacto.
+
+2. CARRUSEL DE OFERTAS (BANNER PRINCIPAL)
+-----------------------------------------
+Al entrar al sitio, verá imágenes grandes que cambian automáticamente cada 5 segundos.
+- Puede cambiar las imágenes manualmente usando las flechas izquierda (<) y derecha (>) que aparecen a los lados.
+- Este espacio es ideal para mostrar promociones, nuevos kits o mensajes importantes para los estudiantes.
+
+3. CATÁLOGO DE PRODUCTOS
+------------------------
+Debajo del carrusel encontrará la sección "Nuestros Productos".
+- Cada tarjeta de producto muestra:
+  * Una imagen del componente.
+  * La categoría (ej. KITS, COMPONENTES).
+  * El nombre del producto.
+  * Una breve descripción técnica.
+  * El precio especial para estudiantes.
+
+4. USO DE FILTROS
+-----------------
+Para facilitar la búsqueda, hemos incluido botones de filtro sobre el catálogo:
+- Todos: Muestra el inventario completo.
+- Kits: Muestra solo los paquetes (ej. Arduino, Kit de Inicio).
+- Componentes: Muestra piezas individuales (ej. Resistencias, Sensores).
+- Herramientas: Muestra equipo de trabajo (ej. Multímetros, Protoboards).
+
+Simplemente haga clic en el botón de la categoría que le interese y el catálogo se actualizará instantáneamente.
+
+5. CÓMO COMPRAR / COTIZAR
+-------------------------
+Este sitio está diseñado para facilitar el contacto directo.
+- En cada producto verá un botón verde que dice "Cotizar" con el icono de WhatsApp.
+- Al hacer clic, se abrirá automáticamente su WhatsApp (en el celular o en la computadora).
+- Se generará un mensaje preescrito que dice: "Hola, me interesa el producto: [Nombre del Producto]".
+- Solo tiene que enviar el mensaje para iniciar la conversación de venta.
+
+6. UBICACIÓN Y MAPA
+-------------------
+Al final de la página encontrará la sección de Ubicación.
+- Hemos integrado un mapa interactivo de Google Maps.
+- Puede hacer clic en "Ampliar mapa" para ver la ruta desde su ubicación actual hasta la tienda.
+- Esto ayuda a los estudiantes a saber exactamente dónde recoger sus materiales.
+
+7. SOPORTE TÉCNICO
+------------------
+Si necesita cambiar precios, imágenes o descripciones de productos en el futuro, contacte a su administrador web o consulte el archivo 'README.md' para instrucciones técnicas básicas.
+
+=================================================
+Gracias por usar nuestro sistema.

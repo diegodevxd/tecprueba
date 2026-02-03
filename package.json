@@ -1,0 +1,18 @@
+{
+  "name": "tienda-electrodomesticos",
+  "version": "1.0.0",
+  "description": "Este es un sitio web estático para una tienda de electrodomésticos.",
+  "main": "script.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vite": "^7.3.0"
+  }
+}
