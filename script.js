@@ -2483,23 +2483,70 @@ function renderProducts(category = 'all', searchTerm = '') {
 
 // Filter Buttons Logic
 let currentCategory = 'all';
+// Build category filter buttons dynamically from products
+function buildCategoryFilters() {
+  const container = document.getElementById('category-filters');
+  if (!container) return;
 
-document.querySelectorAll('.filter-btn').forEach(btn => {
+  // Collect unique categories from products
+  const categories = Array.from(new Set(products.map(p => p.category)));
+
+  // Preferred order (only include if present)
+  const preferred = ['kits', 'componentes', 'herramientas'];
+  const ordered = [];
+  preferred.forEach(p => { if (categories.includes(p)) ordered.push(p); });
+  // Add remaining categories (alphabetical)
+  const others = categories.filter(c => !ordered.includes(c)).sort();
+  const finalCats = [...ordered, ...others];
+
+  // Helper to create button
+  function makeBtn(cat, label, isActive=false) {
+    const btn = document.createElement('button');
+    btn.className = 'filter-btn bg-white text-brand-dark border border-brand-primary px-4 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm text-sm';
+    if (isActive) {
+      btn.classList.remove('bg-white', 'text-brand-dark', 'border', 'border-brand-primary');
+      btn.classList.add('bg-brand-primary', 'text-white', 'shadow-md');
+    }
+    btn.dataset.category = cat;
+    btn.textContent = label;
+    return btn;
+  }
+
+  // Clear existing
+  container.innerHTML = '';
+
+  // Add 'Todos' first
+  container.appendChild(makeBtn('all', 'Todos', true));
+
+  // Add category buttons in final order
+  finalCats.forEach(cat => {
+    // Capitalize display label
+    const label = cat.charAt(0).toUpperCase() + cat.slice(1);
+    container.appendChild(makeBtn(cat, label, false));
+  });
+
+  // Attach listeners
+  document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
-        // Reset styles for all buttons
-        document.querySelectorAll('.filter-btn').forEach(b => {
-            b.classList.remove('bg-brand-primary', 'text-white');
-            b.classList.add('bg-white', 'text-brand-dark', 'border', 'border-brand-primary');
-        });
-        
-        // Set active style for clicked button
-        e.target.classList.remove('bg-white', 'text-brand-dark', 'border', 'border-brand-primary');
-        e.target.classList.add('bg-brand-primary', 'text-white');
+      // Reset styles for all buttons
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('bg-brand-primary', 'text-white');
+        b.classList.add('bg-white', 'text-brand-dark', 'border', 'border-brand-primary');
+      });
+            
+      // Set active style for clicked button
+      const target = e.currentTarget;
+      target.classList.remove('bg-white', 'text-brand-dark', 'border', 'border-brand-primary');
+      target.classList.add('bg-brand-primary', 'text-white');
 
-        currentCategory = e.target.dataset.category;
-        renderProducts(currentCategory, searchInput.value);
+      currentCategory = target.dataset.category;
+      renderProducts(currentCategory, searchInput.value);
     });
-});
+  });
+}
+
+// Build filters on load
+document.addEventListener('DOMContentLoaded', () => buildCategoryFilters());
 
 // Search Logic
 searchInput.addEventListener('input', (e) => {
