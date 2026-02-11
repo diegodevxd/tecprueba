@@ -2432,11 +2432,17 @@ function renderProducts(category = 'all', searchTerm = '') {
         return;
     }
 
+    const isMobile = window.innerWidth < 768;
+
     filteredProducts.forEach((product, index) => {
-        const productCard = document.createElement('div');
-        // Updated classes for carousel on ALL devices
-        // Mobile: w-[45%] (approx 2 items) | Desktop: w-[280px] (fixed width cards)
-        productCard.className = 'group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-on-scroll min-w-[160px] w-[45%] md:w-[280px] flex-shrink-0 snap-start cursor-pointer flex flex-col h-full';
+      const productCard = document.createElement('div');
+      // Mobile: full-width stacked cards for easy scrolling/tap.
+      // Desktop: horizontal fixed-width cards for carousel.
+      if (isMobile) {
+        productCard.className = 'group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-on-scroll w-full mx-auto cursor-pointer flex flex-col';
+      } else {
+        productCard.className = 'group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-on-scroll min-w-[160px] w-[280px] flex-shrink-0 snap-start cursor-pointer flex flex-col h-full';
+      }
         
         // Add click event to open modal
         productCard.onclick = (e) => {
@@ -2480,6 +2486,34 @@ function renderProducts(category = 'all', searchTerm = '') {
         observer.observe(el);
     });
 }
+
+  // Re-render on resize (debounced) to adapt mobile/desktop layout
+  let _resizeTimer = null;
+  window.addEventListener('resize', () => {
+    clearTimeout(_resizeTimer);
+    _resizeTimer = setTimeout(() => {
+      renderProducts(currentCategory, searchInput ? searchInput.value : '');
+    }, 200);
+  });
+
+  // Mobile menu toggle
+  const mobileToggleBtn = document.getElementById('mobileToggleBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileToggleBtn && mobileMenu) {
+    mobileToggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.classList.contains('hidden')) {
+        if (!mobileMenu.contains(e.target) && e.target !== mobileToggleBtn && !mobileToggleBtn.contains(e.target)) {
+          mobileMenu.classList.add('hidden');
+        }
+      }
+    });
+  }
 
 // Filter Buttons Logic
 let currentCategory = 'all';

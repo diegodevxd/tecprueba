@@ -44,9 +44,16 @@
                 <a href="#productos" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Productos</a>
                 <a href="#contacto" class="hover:text-brand-accent transition duration-300 transform hover:scale-110">Contacto</a>
             </div>
-            <button class="md:hidden text-2xl hover:text-brand-accent transition duration-300">
+            <button id="mobileToggleBtn" class="md:hidden text-2xl hover:text-brand-accent transition duration-300">
                 <i class="fas fa-bars"></i>
             </button>
+            <!-- Mobile menu (hidden by default) -->
+            <div id="mobileMenu" class="md:hidden hidden absolute right-4 top-full mt-2 w-56 bg-white text-brand-dark rounded-lg shadow-lg overflow-hidden z-50">
+                <a href="#" class="block px-4 py-3 hover:bg-gray-100">Inicio</a>
+                <a href="#nosotros" class="block px-4 py-3 hover:bg-gray-100">Nosotros</a>
+                <a href="#productos" class="block px-4 py-3 hover:bg-gray-100">Productos</a>
+                <a href="#contacto" class="block px-4 py-3 hover:bg-gray-100">Contacto</a>
+            </div>
         </div>
     </nav>
 
@@ -172,8 +179,8 @@
         </div>
         
         <!-- Product Grid/Carousel Container -->
-        <!-- Carousel on ALL devices -->
-        <div class="flex overflow-x-auto gap-4 md:gap-8 pb-8 snap-x snap-mandatory" id="product-grid">
+        <!-- Responsive: column list on mobile, horizontal carousel on md+ -->
+        <div id="product-grid" class="flex flex-col md:flex-row md:overflow-x-auto gap-4 md:gap-8 pb-8 md:snap-x md:snap-mandatory">
             <!-- Products will be injected here by JS -->
         </div>
     </section>
