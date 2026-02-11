@@ -2309,6 +2309,26 @@ const products = [
   "name": "Microfono",
   "price": "$120 MXN",
   "description": "Micrófono dinámico IT-BLUE IT-M0014. Ideal para voces y presentaciones en vivo; patrón cardioide para reducir ruido ambiente y buena respuesta en rango vocal. Color: Negro. Unidad."
+},
+{
+  "id": 258,
+  "category": "accesorios",
+  "image": "IMAGES/Splitter.png",
+  "name": "Splitter HDMI 1x2",
+  "price": "$619.50 MXN",
+  "description": "Splitter HDMI Lennon LNSP200. Permite distribuir una señal HDMI a dos pantallas simultáneamente. Alimentación DC 5V (1A incluida). Ideal para presentaciones, displays y aplicaciones de video profesional. Color: Negro. Unidad.",
+  "specs": {
+    "Producto": "Splitter HDMI",
+    "Modelo": "LNSP200",
+    "Input HDMI": "1",
+    "Output HDMI": "2",
+    "Voltaje": "DC 5V",
+    "Amper": "1 A",
+    "Color": "Negro",
+    "Presentación": "Unidad",
+    "Stock Disponible": "2",
+    "SKU": "ACC-258"
+  }
 }
 ];
 
