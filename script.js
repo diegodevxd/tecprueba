@@ -2229,6 +2229,87 @@ const products = [
     }
   }
 
+,
+{
+  "id": 248,
+  "category": "accesorios",
+  "image": "IMAGES/prod_248_Audifonos_.png",
+  "name": "Audifonos ",
+  "price": "$120 MXN",
+  "description": "Lennon. LN-BTX800B. Bluetooth sterio. Negro. Individ. Individ."
+},
+{
+  "id": 249,
+  "category": "accesorios",
+  "image": "IMAGES/prod_249_Lupa_con_luz_led.png",
+  "name": "Lupa con luz led",
+  "price": "$120 MXN",
+  "description": "Helping Hand Magnifier . TE-8001. Negro. Individ. Individ."
+},
+{
+  "id": 250,
+  "category": "accesorios",
+  "image": "IMAGES/prod_250_Adaptador_universal_para_laptop_de_65w.png",
+  "name": "Adaptador universal para laptop de 65w",
+  "price": "$120 MXN",
+  "description": "Taika. TK-UN165. Adecuado para la mayoria de las computadoras portatiles . Negro. Individ. Individ."
+},
+{
+  "id": 251,
+  "category": "accesorios",
+  "image": "IMAGES/prod_251_Repetidor_de_wifi.png",
+  "name": "Repetidor de wifi",
+  "price": "$120 MXN",
+  "description": "IT-BLUE. IT-RW3007. Mejora la covertura de redes WAN . Blanco. Individ. Individ."
+},
+{
+  "id": 252,
+  "category": "accesorios",
+  "image": "IMAGES/prod_252_Mause_inalambrico.png",
+  "name": "Mause inalambrico",
+  "price": "$120 MXN",
+  "description": "Wireless. A2-C158-1. Bluetooth . Negro. Individ. Individ."
+},
+{
+  "id": 253,
+  "category": "accesorios",
+  "image": "IMAGES/prod_253_Eliminador.png",
+  "name": "Eliminador",
+  "price": "$120 MXN",
+  "description": "S/N. HZHF-0520. Negro. Individ. Individ."
+},
+{
+  "id": 254,
+  "category": "accesorios",
+  "image": "IMAGES/prod_254_Adaptador_.png",
+  "name": "Adaptador ",
+  "price": "$120 MXN",
+  "description": "IT-BLUE. IT-282. Negro. Individ. Individ."
+},
+{
+  "id": 255,
+  "category": "accesorios",
+  "image": "IMAGES/prod_255_wifi_panorama_camara.png",
+  "name": "wifi panorama camara",
+  "price": "$120 MXN",
+  "description": "No tiene. No tiene. Blanco. 110V. Individ. Individ."
+},
+{
+  "id": 256,
+  "category": "accesorios",
+  "image": "IMAGES/prod_256_Microfono.png",
+  "name": "Microfono",
+  "price": "$120 MXN",
+  "description": "Lennon. LN-M86. Microfono Profecional y Dynamic. Microfono Profecional y Dynamic. Negro. Individ. Individ."
+},
+{
+  "id": 257,
+  "category": "accesorios",
+  "image": "IMAGES/prod_257_Microfono.png",
+  "name": "Microfono",
+  "price": "$120 MXN",
+  "description": "IT-BLUE. IT-M0014/5M. Microfono Dinamico. Microfono Dinamico. Negro. Individ. Individ."
+}
 ];
 
 // Scroll Animation Observer (Moved up to be available for renderProducts)
