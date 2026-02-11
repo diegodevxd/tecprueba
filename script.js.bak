@@ -2229,87 +2229,6 @@ const products = [
     }
   }
 
-,
-{
-  "id": 248,
-  "category": "accesorios",
-  "image": "IMAGES/prod_248_Audifonos_.png",
-  "name": "Audifonos ",
-  "price": "$120 MXN",
-  "description": "Audífonos Bluetooth Lennon LN-BTX800B. Sonido estéreo, micrófono integrado y controles en el auricular. Hasta 8 horas de reproducción; conectividad inalámbrica para llamadas y música. Color: Negro. Unidad."
-},
-{
-  "id": 249,
-  "category": "accesorios",
-  "image": "IMAGES/prod_249_Lupa_con_luz_led.png",
-  "name": "Lupa con luz led",
-  "price": "$120 MXN",
-  "description": "Lupa con luz LED y soporte Helping Hand TE-8001. Lente de aumento para trabajos de precisión, brazo ajustable y base con pinzas de sujeción. Iluminación LED para mayor visibilidad en proyectos de electrónica y manualidades. Unidad."
-},
-{
-  "id": 250,
-  "category": "accesorios",
-  "image": "IMAGES/prod_250_Adaptador_universal_para_laptop_de_65w.png",
-  "name": "Adaptador universal para laptop de 65w",
-  "price": "$120 MXN",
-  "description": "Adaptador de corriente universal Taika TK-UN165, 65W. Incluye puntas intercambiables para la mayoría de laptops, protección contra sobrecarga y entrada 100–240V. Ideal para reemplazo o uso de viaje. Color: Negro. Unidad."
-},
-{
-  "id": 251,
-  "category": "accesorios",
-  "image": "IMAGES/prod_251_Repetidor_de_wifi.png",
-  "name": "Repetidor de wifi",
-  "price": "$120 MXN",
-  "description": "Extensor WiFi IT-BLUE IT-RW3007. Amplía la cobertura de la red doméstica o de oficina; soporta modo repetidor y punto de acceso, con configuración vía botón WPS o app. Mejora la señal en zonas con baja cobertura. Color: Blanco. Unidad."
-},
-{
-  "id": 252,
-  "category": "accesorios",
-  "image": "IMAGES/prod_252_Mause_inalambrico.png",
-  "name": "Mause inalambrico",
-  "price": "$120 MXN",
-  "description": "Mouse inalámbrico Wireless A2-C158-1. Conexión por Bluetooth o receptor USB, resolución ajustable (ej. 1000–1600 DPI), diseño ergonómico y batería de larga duración. Compatible con PC y laptops. Color: Negro. Unidad."
-},
-{
-  "id": 253,
-  "category": "accesorios",
-  "image": "IMAGES/prod_253_Eliminador.png",
-  "name": "Eliminador",
-  "price": "$120 MXN",
-  "description": "Adaptador de corriente (eliminador) HZHF-0520. Fuente de alimentación compacta para dispositivos con entrada DC; incluye protección contra sobrecarga y cortocircuito. Recomendado para equipos electrónicos pequeños. Color: Negro. Unidad."
-},
-{
-  "id": 254,
-  "category": "accesorios",
-  "image": "IMAGES/prod_254_Adaptador_.png",
-  "name": "Adaptador ",
-  "price": "$120 MXN",
-  "description": "Adaptador multiuso IT-BLUE IT-282. Convertidor compacto para conectar diferentes tipos de enchufes o conectores; práctico para accesorios y cables. Color: Negro. Unidad."
-},
-{
-  "id": 255,
-  "category": "accesorios",
-  "image": "IMAGES/prod_255_wifi_panorama_camara.png",
-  "name": "wifi panorama camara",
-  "price": "$120 MXN",
-  "description": "Cámara WiFi panorámica 360° (1080p). Permite vigilancia remota vía app, detección de movimiento y visión nocturna. Ideal para monitoreo en casa o negocio; alimentación AC 110V. Color: Blanco. Unidad."
-},
-{
-  "id": 256,
-  "category": "accesorios",
-  "image": "IMAGES/prod_256_Microfono.png",
-  "name": "Microfono",
-  "price": "$120 MXN",
-  "description": "Micrófono dinámico profesional Lennon LN-M86. Diseñado para presentaciones y grabaciones en vivo, ofrece buena captura vocal y construcción resistente. Incluye adaptador y cable según paquete. Color: Negro. Unidad."
-},
-{
-  "id": 257,
-  "category": "accesorios",
-  "image": "IMAGES/prod_257_Microfono.png",
-  "name": "Microfono",
-  "price": "$120 MXN",
-  "description": "Micrófono dinámico IT-BLUE IT-M0014. Ideal para voces y presentaciones en vivo; patrón cardioide para reducir ruido ambiente y buena respuesta en rango vocal. Color: Negro. Unidad."
-}
 ];
 
 // Scroll Animation Observer (Moved up to be available for renderProducts)
@@ -2432,26 +2351,11 @@ function renderProducts(category = 'all', searchTerm = '') {
         return;
     }
 
-    const isMobile = window.innerWidth < 768;
-    // Adjust container classes for carousel behavior when on mobile
-    if (isMobile) {
-      productGrid.classList.remove('flex-col');
-      productGrid.classList.add('flex-row','overflow-x-auto','scroll-smooth','snap-x','snap-mandatory','touch-pan-x');
-    } else {
-      productGrid.classList.remove('flex-row','overflow-x-auto','scroll-smooth','snap-x','snap-mandatory','touch-pan-x');
-      productGrid.classList.add('flex-col');
-    }
     filteredProducts.forEach((product, index) => {
-      const productCard = document.createElement('div');
-      // Mobile: full-width stacked cards for easy scrolling/tap.
-      // Desktop: horizontal fixed-width cards for carousel.
-      if (isMobile) {
-        // Make each slide full width for carousel
-        productCard.className = 'group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-on-scroll w-full min-w-full flex-shrink-0 snap-start mx-0 cursor-pointer flex flex-col';
-      } else {
-        // Desktop: slightly larger, squarer cards
-        productCard.className = 'group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-on-scroll min-w-[280px] w-[320px] flex-shrink-0 snap-start cursor-pointer flex flex-col';
-      }
+        const productCard = document.createElement('div');
+        // Updated classes for carousel on ALL devices
+        // Mobile: w-[45%] (approx 2 items) | Desktop: w-[280px] (fixed width cards)
+        productCard.className = 'group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-on-scroll min-w-[160px] w-[45%] md:w-[280px] flex-shrink-0 snap-start cursor-pointer flex flex-col h-full';
         
         // Add click event to open modal
         productCard.onclick = (e) => {
@@ -2460,7 +2364,7 @@ function renderProducts(category = 'all', searchTerm = '') {
         };
 
         productCard.innerHTML = `
-            <div class="relative overflow-hidden h-40 md:h-72 bg-gray-50">
+            <div class="relative overflow-hidden h-40 md:h-64 bg-gray-50">
                 <img src="${product.image}" loading="lazy" alt="${product.name}" onerror="this.onerror=null;this.src='IMAGES/prod_101_Resitencia_3.3Ohm.png';" class="w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-110 mix-blend-multiply">
                 <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-5 transition-all duration-300"></div>
                 <div class="absolute top-2 right-2 md:top-4 md:right-4 bg-brand-accent text-brand-dark font-bold px-2 py-0.5 md:px-3 md:py-1 rounded-full shadow-md text-xs md:text-sm uppercase">
@@ -2488,13 +2392,6 @@ function renderProducts(category = 'all', searchTerm = '') {
         productGrid.appendChild(productCard);
     });
 
-    // After rendering slides, if mobile enable range / buttons control
-    if (isMobile) {
-      setupMobileCarousel(filteredProducts.length);
-    } else {
-      resetMobileCarousel();
-    }
-
     // Re-attach observer to new elements
     const newElements = productGrid.querySelectorAll('.animate-on-scroll');
     newElements.forEach(el => {
@@ -2503,171 +2400,25 @@ function renderProducts(category = 'all', searchTerm = '') {
     });
 }
 
-  // Mobile carousel helpers
-  let _mobileCarousel = {
-    active: false,
-    onScrollTimer: null
-  };
-
-  function setupMobileCarousel(slideCount) {
-    const grid = document.getElementById('product-grid');
-    const range = document.getElementById('mobileCarouselRange');
-    const prev = document.getElementById('mobilePrevBtn');
-    const next = document.getElementById('mobileNextBtn');
-    if (!grid || !range) return;
-
-    // configure range
-    range.max = Math.max(0, slideCount - 1);
-    range.value = 0;
-
-    // ensure proper classes on children (safety)
-    Array.from(grid.children).forEach(child => {
-      child.classList.add('min-w-full','w-full','flex-shrink-0','snap-start');
-    });
-
-    // input -> scroll
-    range.oninput = (e) => {
-      const idx = parseInt(e.target.value, 10);
-      grid.scrollTo({ left: idx * grid.clientWidth, behavior: 'smooth' });
-    };
-
-    // update range while user scrolls (debounced)
-    grid.onscroll = () => {
-      clearTimeout(_mobileCarousel.onScrollTimer);
-      _mobileCarousel.onScrollTimer = setTimeout(() => {
-        const idx = Math.round(grid.scrollLeft / grid.clientWidth);
-        range.value = idx;
-      }, 80);
-    };
-
-    // prev/next
-    if (prev) prev.onclick = () => {
-      const v = Math.max(0, parseInt(range.value, 10) - 1);
-      range.value = v; range.oninput({ target: range });
-    };
-    if (next) next.onclick = () => {
-      const v = Math.min(range.max, parseInt(range.value, 10) + 1);
-      range.value = v; range.oninput({ target: range });
-    };
-
-    _mobileCarousel.active = true;
-  }
-
-  function resetMobileCarousel() {
-    const grid = document.getElementById('product-grid');
-    const range = document.getElementById('mobileCarouselRange');
-    const prev = document.getElementById('mobilePrevBtn');
-    const next = document.getElementById('mobileNextBtn');
-    if (range) {
-      range.oninput = null;
-      range.value = 0;
-      range.max = 0;
-    }
-    if (grid) {
-      grid.onscroll = null;
-      Array.from(grid.children).forEach(child => {
-        child.classList.remove('min-w-full','w-full','flex-shrink-0','snap-start');
-      });
-    }
-    if (prev) prev.onclick = null;
-    if (next) next.onclick = null;
-    _mobileCarousel.active = false;
-  }
-
-  // Re-render on resize (debounced) to adapt mobile/desktop layout
-  let _resizeTimer = null;
-  window.addEventListener('resize', () => {
-    clearTimeout(_resizeTimer);
-    _resizeTimer = setTimeout(() => {
-      renderProducts(currentCategory, searchInput ? searchInput.value : '');
-    }, 200);
-  });
-
-  // Mobile menu toggle
-  const mobileToggleBtn = document.getElementById('mobileToggleBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  if (mobileToggleBtn && mobileMenu) {
-    mobileToggleBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!mobileMenu.classList.contains('hidden')) {
-        if (!mobileMenu.contains(e.target) && e.target !== mobileToggleBtn && !mobileToggleBtn.contains(e.target)) {
-          mobileMenu.classList.add('hidden');
-        }
-      }
-    });
-  }
-
 // Filter Buttons Logic
 let currentCategory = 'all';
-// Build category filter buttons dynamically from products
-function buildCategoryFilters() {
-  const container = document.getElementById('category-filters');
-  if (!container) return;
 
-  // Collect unique categories from products
-  const categories = Array.from(new Set(products.map(p => p.category)));
-
-  // Preferred order (only include if present)
-  const preferred = ['kits', 'componentes', 'herramientas'];
-  const ordered = [];
-  preferred.forEach(p => { if (categories.includes(p)) ordered.push(p); });
-  // Add remaining categories (alphabetical)
-  const others = categories.filter(c => !ordered.includes(c)).sort();
-  const finalCats = [...ordered, ...others];
-
-  // Helper to create button
-  function makeBtn(cat, label, isActive=false) {
-    const btn = document.createElement('button');
-    btn.className = 'filter-btn bg-white text-brand-dark border border-brand-primary px-4 py-2 rounded-full font-bold hover:bg-brand-primary hover:text-white transition shadow-sm text-sm';
-    if (isActive) {
-      btn.classList.remove('bg-white', 'text-brand-dark', 'border', 'border-brand-primary');
-      btn.classList.add('bg-brand-primary', 'text-white', 'shadow-md');
-    }
-    btn.dataset.category = cat;
-    btn.textContent = label;
-    return btn;
-  }
-
-  // Clear existing
-  container.innerHTML = '';
-
-  // Add 'Todos' first
-  container.appendChild(makeBtn('all', 'Todos', true));
-
-  // Add category buttons in final order
-  finalCats.forEach(cat => {
-    // Capitalize display label
-    const label = cat.charAt(0).toUpperCase() + cat.slice(1);
-    container.appendChild(makeBtn(cat, label, false));
-  });
-
-  // Attach listeners
-  document.querySelectorAll('.filter-btn').forEach(btn => {
+document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
-      // Reset styles for all buttons
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        b.classList.remove('bg-brand-primary', 'text-white');
-        b.classList.add('bg-white', 'text-brand-dark', 'border', 'border-brand-primary');
-      });
-            
-      // Set active style for clicked button
-      const target = e.currentTarget;
-      target.classList.remove('bg-white', 'text-brand-dark', 'border', 'border-brand-primary');
-      target.classList.add('bg-brand-primary', 'text-white');
+        // Reset styles for all buttons
+        document.querySelectorAll('.filter-btn').forEach(b => {
+            b.classList.remove('bg-brand-primary', 'text-white');
+            b.classList.add('bg-white', 'text-brand-dark', 'border', 'border-brand-primary');
+        });
+        
+        // Set active style for clicked button
+        e.target.classList.remove('bg-white', 'text-brand-dark', 'border', 'border-brand-primary');
+        e.target.classList.add('bg-brand-primary', 'text-white');
 
-      currentCategory = target.dataset.category;
-      renderProducts(currentCategory, searchInput.value);
+        currentCategory = e.target.dataset.category;
+        renderProducts(currentCategory, searchInput.value);
     });
-  });
-}
-
-// Build filters on load
-document.addEventListener('DOMContentLoaded', () => buildCategoryFilters());
+});
 
 // Search Logic
 searchInput.addEventListener('input', (e) => {

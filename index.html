@@ -29,6 +29,14 @@
             }
         }
     </script>
+    <style>
+        /* Mobile carousel range styling for easy touch */
+        #mobileCarouselControls { padding: 0.25rem; }
+        #mobileCarouselRange { height: 18px; -webkit-appearance: none; background: linear-gradient(#e5e7eb, #e5e7eb); border-radius: 999px; }
+        #mobileCarouselRange::-webkit-slider-thumb { -webkit-appearance: none; width: 32px; height: 32px; background: #f59e0b; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.18); margin-top: -7px; }
+        #mobileCarouselRange::-moz-range-thumb { width: 32px; height: 32px; background: #f59e0b; border-radius: 50%; border: none; }
+        #mobileCarouselPrev, #mobileCarouselNext { width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; }
+    </style>
 </head>
 <body class="bg-brand-light font-sans overflow-x-hidden">
 
@@ -56,11 +64,9 @@
             </div>
         </div>
     </nav>
-
     <!-- Hero Carousel -->
     <div class="relative w-full h-[500px] overflow-hidden shadow-2xl">
         <div id="carousel" class="flex transition-transform duration-700 ease-in-out h-full">
-            <!-- Slide 1 -->
             <div class="min-w-full h-full flex items-center justify-center bg-cover bg-center relative group" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70 group-hover:opacity-60 transition duration-500"></div>
                 <div class="relative z-10 text-center p-10 border-4 border-brand-accent rounded-xl bg-black bg-opacity-40 backdrop-blur-sm animate__animated animate__zoomIn">
@@ -69,7 +75,6 @@
                     <a href="#productos" class="bg-brand-accent text-brand-dark font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition duration-300 transform hover:scale-105 shadow-lg">Ver Catálogo</a>
                 </div>
             </div>
-            <!-- Slide 2 -->
             <div class="min-w-full h-full flex items-center justify-center bg-cover bg-center relative group" style="background-image: url('https://images.unsplash.com/photo-1593640408182-31c70c8268f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70 group-hover:opacity-60 transition duration-500"></div>
                 <div class="relative z-10 text-center p-10 border-4 border-blue-400 rounded-xl bg-black bg-opacity-40 backdrop-blur-sm">
@@ -78,7 +83,6 @@
                     <button class="bg-blue-500 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-600 transition duration-300 transform hover:scale-105 shadow-lg">Aprovechar Ahora</button>
                 </div>
             </div>
-            <!-- Slide 3 -->
             <div class="min-w-full h-full flex items-center justify-center bg-cover bg-center relative group" style="background-image: url('https://images.unsplash.com/photo-1526738549149-8e07eca6c147?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black opacity-70 group-hover:opacity-60 transition duration-500"></div>
                 <div class="relative z-10 text-center p-10 border-4 border-green-400 rounded-xl bg-black bg-opacity-40 backdrop-blur-sm">
@@ -183,6 +187,19 @@
         <div id="product-grid" class="flex flex-col md:flex-row md:overflow-x-auto gap-4 md:gap-8 pb-8 md:snap-x md:snap-mandatory">
             <!-- Products will be injected here by JS -->
         </div>
+
+        <!-- Mobile carousel controls (only visible on small screens) -->
+        <div id="mobileCarouselControls" class="md:hidden mt-4 px-4">
+            <div class="flex items-center gap-3">
+                <button id="mobilePrevBtn" class="bg-white rounded-full shadow p-3 text-brand-dark" aria-label="Anterior">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <input id="mobileCarouselRange" type="range" min="0" max="0" value="0" class="flex-1" />
+                <button id="mobileNextBtn" class="bg-white rounded-full shadow p-3 text-brand-dark" aria-label="Siguiente">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
     </section>
 
     <!-- Location Section -->
@@ -232,7 +249,6 @@
                 <div class="flex space-x-4">
                     <a href="https://www.facebook.com/profile.php?id=61568169632653&mibextid=ZbWKwL" target="_blank" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition duration-300"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
             <div>
