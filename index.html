@@ -132,26 +132,92 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Features Section (Expandable Accordion) -->
     <section class="py-16 bg-white">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-b-4 border-brand-primary animate-on-scroll">
-                <div class="text-5xl text-brand-primary mb-4 animate-bounce-slow"><i class="fas fa-graduation-cap"></i></div>
-                <h3 class="text-xl font-bold mb-2">Ofertas para Estudiantes</h3>
-                <p class="text-gray-600">Precios especiales y kits diseñados para tus proyectos escolares.</p>
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            <!-- Ofertas para Estudiantes -->
+            <div class="rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border-b-4 border-brand-primary overflow-hidden animate-on-scroll">
+                <button class="feature-toggle w-full p-6 text-left flex items-center justify-between hover:bg-blue-50 transition" data-feature="students">
+                    <div class="flex items-center">
+                        <div class="text-4xl text-brand-primary mr-4"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 class="text-xl font-bold text-brand-dark">Ofertas para Estudiantes</h3>
+                    </div>
+                    <i class="fas fa-chevron-down text-brand-primary transition-transform transform"></i>
+                </button>
+                <div class="feature-content hidden px-6 pb-6 bg-blue-50 text-sm text-gray-700 space-y-4">
+                    <div>
+                        <h4 class="font-bold text-brand-primary mb-2"><i class="fas fa-rocket mr-2"></i>Bienvenida de Estudiante</h4>
+                        <p><strong>5% de descuento</strong> en todos los kits escolares durante la primera semana de cada mes.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-brand-accent mb-2"><i class="fas fa-id-card mr-2"></i>Descuento por Credencial</h4>
+                        <p>Estudiantes con credencial vigente obtienen un <strong>precio especial</strong>. Una vez cada mes por estudiante.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-green-600 mb-2"><i class="fas fa-users mr-2"></i>Compra Grupal</h4>
+                        <p><strong>3 o más estudiantes</strong> comprando juntos reciben un <strong>descuento adicional</strong>.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-blue-600 mb-2"><i class="fas fa-book-open mr-2"></i>Kits Temáticos</h4>
+                        <p><strong>Básico:</strong> Herramientas esenciales para proyectos sencillos.<br><strong>Avanzado:</strong> Componentes especializados para proyectos complejos.<br><strong>Creativo:</strong> Materiales para proyectos artísticos.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-purple-600 mb-2"><i class="fas fa-calendar mr-2"></i>Promociones Estacionales</h4>
+                        <p><strong>Regreso a Clases (Ago/Sep):</strong> Descuentos especiales.<br><strong>Semana de Exámenes:</strong> Kits de apoyo.<br><strong>Navidad/Día del Estudiante:</strong> Paquetes con envoltura especial.</p>
+                    </div>
+                </div>
             </div>
-            <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-b-4 border-brand-accent animate-on-scroll">
-                <div class="text-5xl text-brand-accent mb-4 animate-pulse-slow"><i class="fas fa-medal"></i></div>
-                <h3 class="text-xl font-bold mb-2">Garantía Extendida</h3>
-                <p class="text-gray-600">Protegemos tu inversión con las mejores garantías.</p>
+
+            <!-- Garantía Extendida -->
+            <div class="rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border-b-4 border-brand-accent overflow-hidden animate-on-scroll">
+                <button class="feature-toggle w-full p-6 text-left flex items-center justify-between hover:bg-amber-50 transition" data-feature="guarantee">
+                    <div class="flex items-center">
+                        <div class="text-4xl text-brand-accent mr-4"><i class="fas fa-medal"></i></div>
+                        <h3 class="text-xl font-bold text-brand-dark">Garantía Extendida</h3>
+                    </div>
+                    <i class="fas fa-chevron-down text-brand-accent transition-transform transform"></i>
+                </button>
+                <div class="feature-content hidden px-6 pb-6 bg-amber-50 text-sm text-gray-700 space-y-3">
+                    <p>Queremos que estés tranquilo con tu compra: cuentas con <strong>3 días de garantía</strong> presentando tu ticket, aplicable solo a defectos de fábrica. Después de la entrega, no realizamos cambios para cuidar la calidad de nuestros productos.</p>
+                </div>
             </div>
-            <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-2 border-b-4 border-green-500 animate-on-scroll">
-                <div class="text-5xl text-green-500 mb-4"><i class="fas fa-headset"></i></div>
-                <h3 class="text-xl font-bold mb-2">Soporte 24/7</h3>
-                <p class="text-gray-600">Estamos aquí para ayudarte en cualquier momento.</p>
+
+            <!-- Soporte Personalizado -->
+            <div class="rounded-lg shadow-lg hover:shadow-2xl transition duration-300 border-b-4 border-green-500 overflow-hidden animate-on-scroll">
+                <button class="feature-toggle w-full p-6 text-left flex items-center justify-between hover:bg-green-50 transition" data-feature="support">
+                    <div class="flex items-center">
+                        <div class="text-4xl text-green-500 mr-4"><i class="fas fa-headset"></i></div>
+                        <h3 class="text-xl font-bold text-brand-dark">Soporte Personalizado</h3>
+                    </div>
+                    <i class="fas fa-chevron-down text-green-500 transition-transform transform"></i>
+                </button>
+                <div class="feature-content hidden px-6 pb-6 bg-green-50 text-sm text-gray-700 space-y-3">
+                    <p>El servicio de soporte está disponible únicamente durante el horario de apertura de la tienda. Con gusto atenderemos tus dudas y solicitudes en ese tiempo.</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <script>
+        // Feature accordion toggle
+        document.querySelectorAll('.feature-toggle').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const icon = this.querySelector('i.fa-chevron-down');
+                const isHidden = content.classList.contains('hidden');
+                
+                // Close all other open accordions
+                document.querySelectorAll('.feature-content').forEach(c => c.classList.add('hidden'));
+                document.querySelectorAll('.fa-chevron-down').forEach(i => i.classList.remove('rotate-180'));
+                
+                // Toggle current
+                if (isHidden) {
+                    content.classList.remove('hidden');
+                    icon.classList.add('rotate-180');
+                }
+            });
+        });
+    </script>
 
     <!-- Product Section -->
     <section id="productos" class="container mx-auto py-16 px-4">
@@ -227,7 +293,7 @@
         <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div class="container mx-auto px-4 relative z-10">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">¿No encuentras lo que buscas?</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Contáctanos directamente y te ayudaremos a conseguir el componente ideal para ti.</p>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Contáctanos directamente y te ayudaremos a conseguir el COMPONENTE ideal para ti.</p>
             <a href="https://wa.me/message/5JU7EJBVWDXLB1" target="_blank" class="inline-block bg-brand-accent text-brand-dark font-bold py-4 px-10 rounded-full hover:bg-yellow-400 transition duration-300 shadow-lg transform hover:scale-110">
                 <i class="fab fa-whatsapp mr-2"></i> Hablar con un Asesor
             </a>
