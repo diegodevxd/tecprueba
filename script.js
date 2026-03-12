@@ -2235,7 +2235,7 @@ const products = [
   "category": "accesorios",
   "image": "IMAGES/prod_248_Audifonos_.png",
   "name": "Audifonos ",
-  "price": "$120 MXN",
+  "price": "$472.50 MXN",
   "description": "Audífonos Bluetooth Lennon LN-BTX800B. Sonido estéreo, micrófono integrado y controles en el auricular. Hasta 8 horas de reproducción; conectividad inalámbrica para llamadas y música. Color: Negro. Unidad."
 },
 {
@@ -2243,7 +2243,7 @@ const products = [
   "category": "accesorios",
   "image": "IMAGES/prod_249_Lupa_con_luz_led.png",
   "name": "Lupa con luz led",
-  "price": "$120 MXN",
+  "price": "$190 MXN",
   "description": "Lupa con luz LED y soporte Helping Hand TE-8001. Lente de aumento para trabajos de precisión, brazo ajustable y base con pinzas de sujeción. Iluminación LED para mayor visibilidad en proyectos de electrónica y manualidades. Unidad."
 },
 {
@@ -2251,7 +2251,7 @@ const products = [
   "category": "accesorios",
   "image": "IMAGES/prod_250_Adaptador_universal_para_laptop_de_65w.png",
   "name": "Adaptador universal para laptop de 65w",
-  "price": "$120 MXN",
+  "price": "$420 MXN",
   "description": "Adaptador de corriente universal Taika TK-UN165, 65W. Incluye puntas intercambiables para la mayoría de laptops, protección contra sobrecarga y entrada 100–240V. Ideal para reemplazo o uso de viaje. Color: Negro. Unidad."
 },
 {
@@ -2259,7 +2259,7 @@ const products = [
   "category": "accesorios",
   "image": "IMAGES/prod_251_Repetidor_de_wifi.png",
   "name": "Repetidor de wifi",
-  "price": "$120 MXN",
+  "price": "$262 MXN",
   "description": "Extensor WiFi IT-BLUE IT-RW3007. Amplía la cobertura de la red doméstica o de oficina; soporta modo repetidor y punto de acceso, con configuración vía botón WPS o app. Mejora la señal en zonas con baja cobertura. Color: Blanco. Unidad."
 },
 {
@@ -2267,7 +2267,7 @@ const products = [
   "category": "accesorios",
   "image": "IMAGES/prod_252_Mause_inalambrico.png",
   "name": "Mause inalambrico",
-  "price": "$120 MXN",
+  "price": "$231 MXN",
   "description": "Mouse inalámbrico Wireless A2-C158-1. Conexión por Bluetooth o receptor USB, resolución ajustable (ej. 1000–1600 DPI), diseño ergonómico y batería de larga duración. Compatible con PC y laptops. Color: Negro. Unidad."
 },
 {
@@ -2275,7 +2275,7 @@ const products = [
   "category": "accesorios",
   "image": "IMAGES/prod_253_Eliminador.png",
   "name": "Eliminador",
-  "price": "$120 MXN",
+  "price": "$90 MXN",
   "description": "Adaptador de corriente (eliminador) HZHF-0520. Fuente de alimentación compacta para dispositivos con entrada DC; incluye protección contra sobrecarga y cortocircuito. Recomendado para equipos electrónicos pequeños. Color: Negro. Unidad."
 },
 {
@@ -2283,7 +2283,7 @@ const products = [
   "category": "accesorios",
   "image": "IMAGES/prod_254_Adaptador_.png",
   "name": "Adaptador ",
-  "price": "$120 MXN",
+  "price": "$90 MXN",
   "description": "Adaptador multiuso IT-BLUE IT-282. Convertidor compacto para conectar diferentes tipos de enchufes o conectores; práctico para accesorios y cables. Color: Negro. Unidad."
 },
 {
@@ -2291,7 +2291,7 @@ const products = [
   "category": "accesorios",
   "image": "IMAGES/prod_255_wifi_panorama_camara.png",
   "name": "wifi panorama camara",
-  "price": "$120 MXN",
+  "price": "$525 MXN",
   "description": "Cámara WiFi panorámica 360° (1080p). Permite vigilancia remota vía app, detección de movimiento y visión nocturna. Ideal para monitoreo en casa o negocio; alimentación AC 110V. Color: Blanco. Unidad."
 },
 {
@@ -2299,7 +2299,7 @@ const products = [
   "category": "accesorios",
   "image": "IMAGES/prod_256_Microfono.png",
   "name": "Microfono",
-  "price": "$120 MXN",
+  "price": "$530 MXN",
   "description": "Micrófono dinámico profesional Lennon LN-M86. Diseñado para presentaciones y grabaciones en vivo, ofrece buena captura vocal y construcción resistente. Incluye adaptador y cable según paquete. Color: Negro. Unidad."
 },
 {
@@ -2307,7 +2307,7 @@ const products = [
   "category": "accesorios",
   "image": "IMAGES/prod_257_Microfono.png",
   "name": "Microfono",
-  "price": "$120 MXN",
+  "price": "$160 MXN",
   "description": "Micrófono dinámico IT-BLUE IT-M0014. Ideal para voces y presentaciones en vivo; patrón cardioide para reducir ruido ambiente y buena respuesta en rango vocal. Color: Negro. Unidad."
 },
 {
@@ -2328,6 +2328,122 @@ const products = [
     "Presentación": "Unidad",
     "Stock Disponible": "2",
     "SKU": "ACC-258"
+  }
+},
+{
+  "id": 259,
+  "category": "accesorios",
+  "image": "IMAGES/prod_259_Audiculares_lennon.png",
+  "name": "Auriculares Lennon",
+  "price": "$150 MXN",
+  "description": "Auriculares alámbricos Lennon LN-EX158K. Frecuencia 20Hz–20kHz, potencia 3mW, cable de 1.2m con conector 3.5mm. Sonido estéreo limpio, ideales para uso diario con celular, laptop o tablet. Color: Negro. Unidad.",
+  "specs": {
+    "Producto": "Auriculares",
+    "Marca": "Lennon",
+    "Modelo": "LN-EX158K",
+    "Frecuencia": "20Hz a 20kHz",
+    "Energía": "3mW",
+    "Cable": "1.2m",
+    "Conector": "3.5mm",
+    "Color": "Negro",
+    "Presentación": "Unidad",
+    "Stock Disponible": "4"
+  }
+},
+{
+  "id": 260,
+  "category": "accesorios",
+  "image": "IMAGES/prod_260_Fuente_de_poder.png",
+  "name": "Fuente de poder 200W",
+  "price": "$299 MXN",
+  "description": "Fuente de poder IT-BLUE IT-CB200, 200W reales. Compatible con entrada 110V/220V, ventilador integrado para disipación de calor. Ideal para equipos de escritorio y proyectos de ensamblado. Color: Gris. Unidad.",
+  "specs": {
+    "Producto": "Fuente de poder",
+    "Marca": "IT-BLUE",
+    "Modelo": "IT-CB200",
+    "Potencia": "200W reales",
+    "Voltaje entrada": "110V/220V",
+    "Ventilación": "Ventilador integrado",
+    "Color": "Gris",
+    "Presentación": "Unidad",
+    "Stock Disponible": "3"
+  }
+},
+{
+  "id": 261,
+  "category": "accesorios",
+  "image": "IMAGES/prod_261_Fuente_de_poder_ATX.png",
+  "name": "Fuente de poder ATX 500W",
+  "price": "$550 MXN",
+  "description": "Fuente de poder ATX IT-BLUE IT-534, 500W. Voltaje de salida 12V, entrada 110V, ventilador integrado. Conectores ATX estándar para motherboard, GPU y periféricos. Ideal para PCs de escritorio. Color: Negro. Unidad.",
+  "specs": {
+    "Producto": "Fuente de poder ATX",
+    "Marca": "IT-BLUE",
+    "Modelo": "IT-534",
+    "Potencia": "500W",
+    "Voltaje salida": "12V",
+    "Voltaje entrada": "110V",
+    "Ventilación": "Ventilador integrado",
+    "Color": "Negro",
+    "Presentación": "Unidad",
+    "Stock Disponible": "3"
+  }
+},
+{
+  "id": 262,
+  "category": "accesorios",
+  "image": "IMAGES/prod_262_Bocinas_para_pc.png",
+  "name": "Bocinas para PC",
+  "price": "$250 MXN",
+  "description": "Bocinas multimedia 2.0 Taika TK-MS22. Potencia 6W RMS (3W x 2), alimentación USB, audio por cable 3.5mm. Respuesta de frecuencia 90Hz–20kHz, driver de 2 pulgadas, control de volumen externo. Compatible con Windows y Mac. Color: Rojo. Par.",
+  "specs": {
+    "Producto": "Bocinas para PC",
+    "Marca": "Taika",
+    "Modelo": "TK-MS22",
+    "Potencia RMS": "6W (3W x 2)",
+    "Alimentación": "USB",
+    "Audio": "Cable 3.5mm",
+    "Frecuencia": "90Hz–20kHz",
+    "Impedancia": "4 Ohm",
+    "Color": "Rojo",
+    "Presentación": "Par",
+    "Stock Disponible": "3"
+  }
+},
+{
+  "id": 263,
+  "category": "accesorios",
+  "image": "IMAGES/prod_263_Cargador_universal_para_laptop.png",
+  "name": "Cargador universal USB-C 65W",
+  "price": "$270 MXN",
+  "description": "Cargador universal para laptop Taika, 65W con punta USB Tipo C. Entrada 100–240V 1.5A, compatible con la mayoría de laptops con puerto USB-C. Compacto y portable. Color: Negro. Unidad.",
+  "specs": {
+    "Producto": "Cargador universal para laptop",
+    "Marca": "Taika",
+    "Potencia": "65W",
+    "Entrada": "100-240V 1.5A",
+    "Punta": "USB Tipo C",
+    "Color": "Negro",
+    "Presentación": "Unidad",
+    "Stock Disponible": "1"
+  }
+},
+{
+  "id": 264,
+  "category": "accesorios",
+  "image": "IMAGES/prod_264_Kit_gamer.png",
+  "name": "Kit Gamer Teclado + Mouse",
+  "price": "Consultar precio",
+  "description": "Kit gamer IT-BLUE IT-K2054. Incluye teclado USB con retroiluminación y mouse ergonómico con diseño gaming. Conexión alámbrica para máxima estabilidad en juegos. Color: Negro. Set.",
+  "specs": {
+    "Producto": "Kit Gamer Teclado + Mouse",
+    "Marca": "IT-BLUE",
+    "Modelo": "IT-K2054",
+    "Teclado": "USB",
+    "Mouse": "Diseño ergonómico",
+    "Color": "Negro",
+    "Presentación": "Set",
+    "Stock Disponible": "2"
   }
 }
 ];
