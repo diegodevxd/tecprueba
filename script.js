@@ -2445,6 +2445,107 @@ const products = [
     "Presentación": "Set",
     "Stock Disponible": "2"
   }
+},
+{
+  "id": 265,
+  "category": "electronica",
+  "image": "IMAGES/elec_Conector_hembra_terminal_verde.png",
+  "name": "Conector Plug Terminal Hembra Verde",
+  "price": "$10 MXN",
+  "description": "Conector Plug Terminal Hembra Verde. Tipo de componente: Polipropileno random. Género: Hembra. Voltaje: 12V-24V. Color: Negro/verde. Presentación individual.",
+  "specs": {
+    "Tipo de componente": "Polipropileno random",
+    "Tipo de conector": "Plug",
+    "Género": "Hembra",
+    "Voltaje": "12V-24V",
+    "Color": "Negro/verde",
+    "Presentación": "Individual"
+  }
+},
+{
+  "id": 266,
+  "category": "electronica",
+  "image": "IMAGES/elec_Conector_macho_terminal_verde.png",
+  "name": "Conector Plug Terminal Macho Verde",
+  "price": "$10 MXN",
+  "description": "Conector Plug Terminal Macho Verde. Tipo de componente: Polipropileno random. Género: Macho. Voltaje: 12V-24V. Color: Negro/verde. Presentación individual.",
+  "specs": {
+    "Tipo de componente": "Polipropileno random",
+    "Tipo de conector": "Plug",
+    "Género": "Macho",
+    "Voltaje": "12V-24V",
+    "Color": "Negro/verde",
+    "Presentación": "Individual"
+  }
+},
+{
+  "id": 267,
+  "category": "electronica",
+  "image": "IMAGES/elec_Motor_R150.png",
+  "name": "Motor R150 DC 1V-5V 5400 RPM",
+  "price": "$21 MXN",
+  "description": "Motor R150 DC de escobillas. Voltaje nominal: 3V. Operación: 1V~3V (5V máx). Velocidades: 5400 RPM a 1V, 15900 RPM a 3V, 23900 RPM a 5V. Presentación individual.",
+  "specs": {
+    "Tipo de motor": "Motor de DC de escobillas",
+    "Voltaje nominal": "3V",
+    "Voltaje de operación": "1V ~ 3V (5V máx)",
+    "Velocidad (1V)": "5400 RPM",
+    "Velocidad (3V)": "15900 RPM",
+    "Velocidad (5V)": "23900 RPM",
+    "Presentación": "Individual"
+  }
+},
+{
+  "id": 268,
+  "category": "electronica",
+  "image": "IMAGES/elec_Motorreductor_amarillo_481.png",
+  "name": "Motorreductor Amarillo para Carrito",
+  "price": "$32 MXN",
+  "description": "El Motorreductor Amarillo para Carrito es un dispositivo electromecánico que te permite reducir la velocidad y aumentar el torque. Voltaje: 3V–6V DC. Corriente: ~110mA (3V), ~130mA (5V), ~150mA (6V).",
+  "specs": {
+    "Tipo de motor": "Motorreductor",
+    "Voltaje": "3V – 6V DC",
+    "Corriente (3V)": "~110mA",
+    "Corriente (5V)": "~130mA",
+    "Corriente (6V)": "~150mA",
+    "Presentación": "Individual"
+  }
+},
+{
+  "id": 269,
+  "category": "electronica",
+  "image": "IMAGES/elec_Motor_365.png",
+  "name": "Motor 365 12V 5000 RPM",
+  "price": "$54 MXN",
+  "description": "El Motor 365 12V 5500 RPM con eje tipo circular de 12 mm de largo y 2.3 de diámetro es un dispositivo que aprovecha la energía eléctrica en movimiento rotatorio, ampliamente utilizado en proyectos de robótica y mecatrónica.",
+  "specs": {
+    "Tipo de motor": "Motor 365 12V 5000 RPM",
+    "Voltaje nominal": "12V DC",
+    "Velocidad sin carga (12V)": "5000 ± 10% RPM",
+    "Corriente sin carga (12V)": "0.08 A",
+    "Velocidad sin carga (9V)": "4500 ± 10% RPM",
+    "Potencia": "2.15 W",
+    "Corriente eje bloqueado": "1.5 A",
+    "Presentación": "Individual"
+  }
+},
+{
+  "id": 270,
+  "category": "electronica",
+  "image": "IMAGES/elec_Motor_R250.png",
+  "name": "Motor R250 DC 1V-5V 15000 RPM",
+  "price": "$23 MXN",
+  "description": "El Motor R250 es un motor de corriente directa (DC) que funciona en un rango de voltaje desde 1V hasta 5V, alcanzando una velocidad máxima (sin carga) de 15000 RPM en su eje circular de 6.5 mm de largo y 2 mm de diámetro.",
+  "specs": {
+    "Tipo de motor": "Motor de DC de escobillas",
+    "Voltaje nominal": "3V",
+    "Voltaje recomendado": "1V ~ 4V (6V máx)",
+    "Corriente nominal": "0.85A ~ 2A",
+    "Velocidad (1V)": "3000 RPM",
+    "Velocidad (3V)": "9300 RPM",
+    "Velocidad (5V)": "15000 RPM",
+    "Presentación": "Individual"
+  }
 }
 ];
 
