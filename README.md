@@ -1,35 +1,40 @@
-# Tienda de Electrodomésticos (Ingeniería)
+# Engineering Components & Electronics Storefront
 
-Este es un sitio web para una tienda de componentes de ingeniería y electrónica.
+A responsive, high-performance web application built for a retail store specializing in engineering components, hardware electronics, and technical tools. This platform bridges the gap between digital catalog browsing and direct client-to-vendor communication.
 
-## Características
+## 🚀 Key Features
 
-- **Carrusel de Imágenes**: Muestra ofertas y productos destacados en la página de inicio.
-- **Catálogo de Productos**: Lista de productos con imágenes, precios y descripciones.
-- **Filtrado por Categoría**: Filtra productos por Kits, Componentes o Herramientas.
-- **Integración con WhatsApp**: Los clientes pueden contactar directamente para cotizar un producto específico.
-- **Mapa de Ubicación**: Integración con Google Maps.
-- **Diseño Responsivo**: Se adapta a dispositivos móviles y de escritorio.
+- **Dynamic Image Carousel:** Highlights active promotions, seasonal offers, and featured engineering hardware on the landing page.
+- **Structured Product Catalog:** Comprehensive inventory listing displaying clear imagery, accurate pricing, and brief technical descriptions.
+- **Category-Based Filtering:** Seamless client-side navigation allowing users to instantly filter inventory by Kits, Components, or Tools.
+- **WhatsApp Integration (Instant Quote Pipeline):** Enables customers to click any specific product to instantly initiate a pre-filled WhatsApp chat for custom quotes and order placement.
+- **Embedded Location Map:** Smooth Google Maps integration to facilitate physical store discovery.
+- **Fully Responsive UI:** Built with a mobile-first approach, ensuring a flawless layout across mobile devices, tablets, and desktops.
 
-## Cómo usar
+## 🛠️ Tech Stack & Ecosystem
 
-### Opción 1: Modo Simple (Sin instalación)
-1.  Abre el archivo `index.html` directamente en tu navegador web.
+- **Frontend Core:** HTML5, CSS3, JavaScript (ES6+)
+- **Styling Framework:** Tailwind CSS (Utility-first CSS framework for highly optimized rendering)
+- **Development Tooling:** Node.js environment with automated local dev server configurations.
 
-### Opción 2: Modo Desarrollador (Con Node.js)
-1.  Asegúrate de tener Node.js instalado.
-2.  Abre una terminal en la carpeta del proyecto.
-3.  Ejecuta `npm install` para instalar las dependencias.
-4.  Ejecuta `npm run dev` para iniciar el servidor de desarrollo local.
-5.  Abre el enlace que aparece en la terminal (usualmente `http://localhost:5173`).
+## 📦 Getting Started
 
-## Personalización
+### Option 1: Standalone Mode (Quick View)
+1. Clone or download this repository.
+2. Open the `index.html` file directly in any modern web browser.
 
-- **Productos**: Para editar los productos, abre el archivo `script.js` y modifica el arreglo `products`.
-- **Imágenes**: Cambia las URLs en `index.html` o `script.js`.
-- **Estilos**: El sitio utiliza Tailwind CSS. Puedes agregar estilos personalizados en `styles.css`.
+### Option 2: Local Development Environment (Advanced)
+1. Ensure you have **Node.js** installed on your system.
+2. Open your terminal and navigate to the project's root folder:
+   ```bash
+   cd local-retail-web-platform
+3. Install the development dependencies:
+   npm install
+4.Boot up the local development server:
+   npm run dev
+5.Open your browser and navigate to the local URL provided in the terminal (typically http://localhost:5173).
+Customization & Architecture
 
-## Requisitos
+    Inventory Data: The catalog is driven dynamically. To add, remove, or modify products, update the products array dataset inside script.js.
 
-- Navegador web moderno.
-- Node.js (Opcional, para desarrollo avanzado).
+    Styling & Theme: Global utility classes are handled via Tailwind CSS. Custom style overwrites or utility extensions can be managed directly in styles.css.   
